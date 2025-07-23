@@ -1,0 +1,68 @@
+[
+  {
+    "id": 0,
+    "quote": "correct answer: option 1",
+    "answers": [
+      "option 1 - true",
+      "option 2 - false",
+      "option 3 - false",
+      "option 4 - false"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 1,
+    "quote": "correct answer: option 3",
+    "answers": [
+      "option 1 - false",
+      "option 2 - false",
+      "option 3 - true",
+      "option 4 - false"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 2,
+    "quote": "correct answer: option 2",
+    "answers": [
+      "option 1 - false",
+      "option 2 - true",
+      "option 3 - false",
+      "option 4 - false"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 3,
+    "quote": "correct answer: option 1",
+    "answers": [
+      "option 1 - true",
+      "option 2 - false",
+      "option 3 - false",
+      "option 4 - false"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 4,
+    "quote": "correct answer: option 4",
+    "answers": [
+      "option 1 - false",
+      "option 2 - false",
+      "option 3 - false",
+      "option 4 - true"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 5,
+    "quote": "correct answer: option 3",
+    "answers": [
+      "option 1 - false",
+      "option 2 - false",
+      "option 3 - true",
+      "option 4 - false"
+    ],
+    "correctAnswer": 2
+  }
+]
