@@ -36,7 +36,7 @@ export default function RootLayout({
       >
         <div className="background"></div>
         <Navbar />
-        <main className="flex">{children}</main>
+        <main className="flex flex-col lg:flex-row gap-8">{children}</main>
       </body>
     </html>
   );

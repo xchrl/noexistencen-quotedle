@@ -2,23 +2,19 @@ import quotes from "@/data/quotes.json";
 import { NextRequest, NextResponse } from "next/server";
 
 type RequestBody = {
-  usedIds: number[];
+  id: number;
 };
 
 export async function POST(req: NextRequest) {
-  const { usedIds }: RequestBody = await req.json();
+  const { id: quoteId }: RequestBody = await req.json();
 
-  const availableQuotes = quotes.filter((q) => !usedIds.includes(q.id));
+  const quote = quotes.find(({ id }) => id == quoteId);
 
-  if (availableQuotes.length === 0) {
-    return NextResponse.json(
-      { error: "No more quotes available" },
-      { status: 404 }
-    );
+  if (!quote) {
+    return NextResponse.json({ error: "Quote not found" }, { status: 404 });
   }
 
-  const randomIndex = Math.floor(Math.random() * availableQuotes.length);
-  const selectedQuote = availableQuotes[randomIndex];
+  const { correctAnswer, ...publicQuote } = quote;
 
-  return NextResponse.json(selectedQuote);
+  return NextResponse.json(publicQuote);
 }

@@ -11,13 +11,16 @@ export default function InfoCard() {
 
   useEffect(() => {
     const handleCustomChange = () => {
-      const { totalGuesses, correctGueses, streak, personalBest } =
-        loadLocalStorage();
-      setTotalGuesses(totalGuesses);
-      setCorrectGuesses(correctGueses);
-      setCorrectStreak(streak);
-      setPersonalBest(personalBest);
+      const { dailyModeStats } = loadLocalStorage();
+      if (dailyModeStats) {
+        setTotalGuesses(JSON.parse(dailyModeStats).total_guesses);
+        setCorrectGuesses(JSON.parse(dailyModeStats).correct_guesses);
+        setCorrectStreak(JSON.parse(dailyModeStats).streak);
+        setPersonalBest(JSON.parse(dailyModeStats).personal_best);
+      }
     };
+
+    handleCustomChange();
 
     window.addEventListener("localStorageUpdated", handleCustomChange);
 

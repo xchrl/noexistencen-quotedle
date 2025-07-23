@@ -1,5 +1,6 @@
 "use client";
 
+import loadLocalStorage from "@/lib/loadLocalStorage";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 
@@ -13,10 +14,16 @@ type QuoteQuestion = {
 type QuoteCardProps = {
   quote: QuoteQuestion;
   onNext: () => void;
+  onAnswer: () => void;
   number: number;
 };
 
-export default function QuoteCard({ quote, onNext, number }: QuoteCardProps) {
+export default function QuoteCard({
+  quote,
+  onNext,
+  onAnswer,
+  number,
+}: QuoteCardProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
 
@@ -36,57 +43,64 @@ export default function QuoteCard({ quote, onNext, number }: QuoteCardProps) {
       .then(({ correct }) => {
         setIsCorrect(correct);
         try {
-          const totalGuesses = localStorage.getItem("total_guesses");
-          if (totalGuesses == "null" || totalGuesses == null) {
-            localStorage.setItem("total_guesses", "0");
-          } else
+          const { dailyModeStats } = loadLocalStorage();
+          if (dailyModeStats) {
+            const dailyModeData = JSON.parse(dailyModeStats);
+            const streak = dailyModeData.streak;
+            const personalBest = dailyModeData.personal_best;
+
             localStorage.setItem(
-              "total_guesses",
-              (parseInt(totalGuesses) + 1).toString()
+              "daily_mode_stats",
+              JSON.stringify({
+                total_guesses: parseInt(dailyModeData.total_guesses + 1),
+                correct_guesses: correct
+                  ? dailyModeData.correct_guesses + 1
+                  : dailyModeData.correct_guesses,
+                streak: correct ? dailyModeData.streak + 1 : 0,
+                personal_best: correct
+                  ? streak >= personalBest
+                    ? dailyModeData.personal_best + 1
+                    : dailyModeData.personal_best
+                  : dailyModeData.personal_best,
+              })
             );
-
-          const correctGueses = localStorage.getItem("correct_guesses");
-          if (correctGueses == "null" || correctGueses == null) {
-            localStorage.setItem("correct_guesses", "0");
-          } else {
-            console.log("reached", isCorrect);
-            correct
-              ? localStorage.setItem(
-                  "correct_guesses",
-                  (parseInt(correctGueses) + 1).toString()
-                )
-              : "";
           }
-
-          let correctStreak = localStorage.getItem("streak");
-          if (correctStreak == "null" || correctStreak == null) {
-            localStorage.setItem("streak", "0");
+          const today = localStorage.getItem("today");
+          if (today == "null" || today == null) {
+            localStorage.setItem("today", "{}");
           } else {
-            correct
-              ? localStorage.setItem(
-                  "streak",
-                  (parseInt(correctStreak) + 1).toString()
-                )
-              : localStorage.setItem("streak", "0");
-          }
+            const { guesses, correct_guesses, date } = JSON.parse(today);
+            const todayDate = "2025-07-26";
 
-          const personalBest = localStorage.getItem("personal_best");
-          if (personalBest == "null" || personalBest == null) {
-            localStorage.setItem("personal_best", "0");
-          } else {
-            if (correctStreak == "null" || correctStreak == null)
-              correctStreak = "0";
-            const pbNumber = parseInt(personalBest);
-            const streakNumber = parseInt(correctStreak);
-            console.log(streakNumber, pbNumber, streakNumber > pbNumber);
-            correct
-              ? streakNumber >= pbNumber
+            if (date == todayDate) {
+              correct
                 ? localStorage.setItem(
-                    "personal_best",
-                    (streakNumber + 1).toString()
+                    "today",
+                    JSON.stringify({
+                      guesses: (parseInt(guesses) + 1).toString(),
+                      correct_guesses: (
+                        parseInt(correct_guesses) + 1
+                      ).toString(),
+                      date: date,
+                    })
                   )
-                : ""
-              : "";
+                : localStorage.setItem(
+                    "today",
+                    JSON.stringify({
+                      guesses: (parseInt(guesses) + 1).toString(),
+                      correct_guesses: parseInt(correct_guesses),
+                      date: date,
+                    })
+                  );
+            } else
+              localStorage.setItem(
+                "today",
+                JSON.stringify({
+                  guesses: 0,
+                  correct_guesses: 0,
+                  date: date,
+                })
+              );
           }
         } catch (err) {
           console.error(
@@ -128,14 +142,17 @@ export default function QuoteCard({ quote, onNext, number }: QuoteCardProps) {
             } ${
               // Has an answer been selectedd?
               selectedAnswer === null
-                ? "hover:scale-110 hover:cursor-pointer hover:bg-red-400"
+                ? "hover:scale-110 hover:cursor-pointer"
                 : // Is the selected answer not equal to this button?
                 selectedAnswer !== index
                 ? "text-muted-foreground"
                 : ""
             }`}
             key={index}
-            onClick={() => handleAnswer(index)}
+            onClick={() => {
+              onAnswer();
+              handleAnswer(index);
+            }}
             disabled={selectedAnswer !== null}
           >
             {answer}
