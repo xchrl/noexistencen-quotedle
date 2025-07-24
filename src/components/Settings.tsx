@@ -147,7 +147,7 @@ export default function Settings() {
                           {images.map((image, index) => (
                             <AspectRatio ratio={16 / 9} key={index}>
                               <Image
-                                src={image.src}
+                                src={image}
                                 width={1080}
                                 height={608}
                                 alt={`${label} ${index + 1}`}
