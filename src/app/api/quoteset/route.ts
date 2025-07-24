@@ -1,9 +1,8 @@
-// app/api/answer/route.ts
 import quotes from "@/data/quotes.json";
 import { NextResponse } from "next/server";
 import seedrandom from "seedrandom";
 
-export async function GET() {
+export function GET() {
   const today = "2024-07-24";
   const rng = seedrandom(today);
 

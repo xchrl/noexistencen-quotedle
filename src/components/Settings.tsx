@@ -19,7 +19,6 @@ import {
 } from "./ui/accordion";
 import backgrounds from "@/lib/backgroundImages";
 import Image, { type StaticImageData } from "next/image";
-import { AspectRatio } from "./ui/aspect-ratio";
 import { useEffect, useState } from "react";
 import { CheckedState } from "@radix-ui/react-checkbox";
 import { ScrollArea } from "./ui/scroll-area";
@@ -138,23 +137,21 @@ export default function Settings() {
             <h2 className="text-xl font-bold">Backgrounds</h2>
             <div className="flex items-center space-x-2">
               <Accordion type="single" collapsible className="w-full">
-                <ScrollArea className="h-96">
+                <ScrollArea className="h-48 lg:h-96">
                   {backgrounds.map(({ label, value, images }) => (
                     <AccordionItem value={value} key={value}>
                       <AccordionTrigger>{label}</AccordionTrigger>
                       <AccordionContent>
-                        <div className="grid grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                           {images.map((image, index) => (
-                            <AspectRatio ratio={16 / 9} key={index}>
-                              <Image
-                                src={image}
-                                width={640}
-                                height={360}
-                                alt={`${label} ${index + 1}`}
-                                className="rounded-lg duration-150 hover:brightness-60 hover:cursor-pointer"
-                                onClick={() => handleBackgroundChange(image)}
-                              />
-                            </AspectRatio>
+                            <Image
+                              key={index}
+                              src={image}
+                              alt={`${label} ${index + 1}`}
+                              sizes="(max-width: 480px) 256px, (max-width: 640px) 384px, (max-width: 768px) 480px, 640px"
+                              className="rounded-lg duration-150 hover:brightness-60 hover:cursor-pointer"
+                              onClick={() => handleBackgroundChange(image)}
+                            />
                           ))}
                         </div>
                       </AccordionContent>

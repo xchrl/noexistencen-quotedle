@@ -1,4 +1,3 @@
-// app/api/answer/route.ts
 import quotes from "@/data/quotes.json";
 import { NextRequest, NextResponse } from "next/server";
 

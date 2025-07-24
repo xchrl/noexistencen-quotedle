@@ -37,8 +37,10 @@ export default function RootLayout({
         className={`${plusJakartaSans.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="background"></div>
-        <Navbar />
-        <main className="flex flex-col lg:flex-row gap-8 container mx-auto">
+        <header className="px-4 lg:px-0">
+          <Navbar />
+        </header>
+        <main className="flex flex-col lg:flex-row gap-2 lg:gap-8 container mx-auto px-4 lg:px-0 my-4">
           {children}
         </main>
         <SpeedInsights />
