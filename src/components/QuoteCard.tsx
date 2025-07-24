@@ -1,10 +1,11 @@
 "use client";
 
 import loadLocalStorage from "@/lib/loadLocalStorage";
-import { ArrowRight } from "lucide-react";
+import { ArrowDownIcon, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import quotes from "@/data/quotes.json";
 import type QuoteQuestion from "@/types/QuoteQuestion";
+import { AnimatePresence, motion } from "framer-motion";
 
 type QuoteCardProps = {
   quote: QuoteQuestion;
@@ -21,6 +22,7 @@ export default function QuoteCard({
 }: QuoteCardProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
+  const [quoteFromRevealed, setQuoteFromRevealed] = useState<boolean>(false);
 
   const handleAnswer = (index: number) => {
     setSelectedAnswer(index);
@@ -140,6 +142,44 @@ export default function QuoteCard({
         onClick={handleNext}
       >
         Next <ArrowRight />
+      </button>
+      <button
+        className={`${
+          selectedAnswer === null ? "hidden" : ""
+        } bg-yellow-400/30 border border-yellow-400/60 p-3 rounded-lg hover:bg-yellow-400/50 hover:border-yellow-400-80 duration-150 hover:cursor-pointer`}
+        onClick={() => setQuoteFromRevealed(!quoteFromRevealed)}
+      >
+        <p className="flex justify-between gap-4">
+          Where is this quote from?{" "}
+          <ArrowDownIcon
+            className={`transform transition-transform duration-300 ${
+              quoteFromRevealed ? "rotate-180" : ""
+            }`}
+          />
+        </p>
+
+        <AnimatePresence>
+          {quoteFromRevealed && (
+            <motion.div
+              layout
+              initial={{ height: 0 }}
+              animate={{ height: "auto" }}
+              exit={{ height: 0 }}
+              transition={{ duration: 0.4 }}
+              className="overflow-hidden"
+            >
+              <p className="mt-4 text-left">
+                This quote is from Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Debitis maiores eum, quae iusto est dolor,
+                error libero dolores reprehenderit esse neque inventore
+                excepturi in? Exercitationem alias fuga dolor quam nobis
+                blanditiis voluptate natus id laboriosam eos consectetur,
+                numquam at et inventore suscipit praesentium architecto quod
+                obcaecati tempore nam rem nemo.
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </button>
     </div>
   );
