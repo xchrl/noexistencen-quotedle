@@ -3,13 +3,8 @@
 import loadLocalStorage from "@/lib/loadLocalStorage";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
-
-type QuoteQuestion = {
-  id: number;
-  quote: string;
-  answers: string[];
-  correctAnswer: number;
-};
+import quotes from "@/data/quotes.json";
+import type QuoteQuestion from "@/types/QuoteQuestion";
 
 type QuoteCardProps = {
   quote: QuoteQuestion;
@@ -27,75 +22,69 @@ export default function QuoteCard({
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
 
-  const handleAnswer = async (index: number) => {
+  const handleAnswer = (index: number) => {
     setSelectedAnswer(index);
-    await fetch("/api/answer", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        quoteId: quote.id,
-        selectedAnswer: index,
-      }),
-    })
-      .then((res) => res.json())
-      .then(({ correct }) => {
-        setIsCorrect(correct);
-        try {
-          const { dailyModeStats } = loadLocalStorage();
-          if (dailyModeStats) {
-            const dailyModeData = JSON.parse(dailyModeStats);
-            const streak = dailyModeData.streak;
-            const personalBest = dailyModeData.personal_best;
+    const foundQuote = quotes.find((q) => q.id === quote.id);
+    if (!foundQuote) {
+      console.error("Didn't find quote with id ", quote.id);
+      return;
+    }
+    const correct = foundQuote.correctAnswer == index;
+    setIsCorrect(correct);
 
-            localStorage.setItem(
-              "daily_mode_stats",
-              JSON.stringify({
-                total_guesses: parseInt(dailyModeData.total_guesses + 1),
-                correct_guesses: correct
-                  ? dailyModeData.correct_guesses + 1
-                  : dailyModeData.correct_guesses,
-                streak: correct ? dailyModeData.streak + 1 : 0,
-                personal_best: correct
-                  ? streak >= personalBest
-                    ? dailyModeData.personal_best + 1
-                    : dailyModeData.personal_best
-                  : dailyModeData.personal_best,
-              })
-            );
-          }
-          const today = localStorage.getItem("today");
-          if (today == "null" || today == null) {
-            localStorage.setItem("today", "{}");
-          } else {
-            const { guesses, correct_guesses, date } = JSON.parse(today);
-            const todayDate = "2025-07-26";
+    // Upon answer, save data to localStorage
+    try {
+      const { dailyModeStats } = loadLocalStorage();
+      if (dailyModeStats) {
+        const dailyModeData = JSON.parse(dailyModeStats);
+        const streak = dailyModeData.streak;
+        const personalBest = dailyModeData.personal_best;
 
-            localStorage.setItem(
-              "today",
-              JSON.stringify({
-                guesses:
-                  date == todayDate ? (parseInt(guesses) + 1).toString() : 0,
-                correct_guesses: (date == todayDate
-                  ? correct
-                    ? (parseInt(correct_guesses) + 1).toString()
-                    : parseInt(correct_guesses)
-                  : 0
-                ).toString(),
-                date: date,
-              })
-            );
-          }
-        } catch (err) {
-          console.error(
-            "An error occured while writing your data to localStorage: ",
-            err
-          );
-        } finally {
-          window.dispatchEvent(new Event("localStorageUpdated"));
-        }
-      });
+        localStorage.setItem(
+          "daily_mode_stats",
+          JSON.stringify({
+            total_guesses: parseInt(dailyModeData.total_guesses + 1),
+            correct_guesses: correct
+              ? dailyModeData.correct_guesses + 1
+              : dailyModeData.correct_guesses,
+            streak: correct ? dailyModeData.streak + 1 : 0,
+            personal_best: correct
+              ? streak >= personalBest
+                ? dailyModeData.personal_best + 1
+                : dailyModeData.personal_best
+              : dailyModeData.personal_best,
+          })
+        );
+      }
+      const today = localStorage.getItem("today");
+      if (today == "null" || today == null) {
+        localStorage.setItem("today", "{}");
+      } else {
+        const { guesses, correct_guesses, date } = JSON.parse(today);
+        const todayDate = "2025-07-26";
+
+        localStorage.setItem(
+          "today",
+          JSON.stringify({
+            guesses: date == todayDate ? (parseInt(guesses) + 1).toString() : 0,
+            correct_guesses: (date == todayDate
+              ? correct
+                ? (parseInt(correct_guesses) + 1).toString()
+                : parseInt(correct_guesses)
+              : 0
+            ).toString(),
+            date: date,
+          })
+        );
+      }
+    } catch (err) {
+      console.error(
+        "An error occured while writing your data to localStorage: ",
+        err
+      );
+    } finally {
+      window.dispatchEvent(new Event("localStorageUpdated"));
+    }
   };
 
   const handleNext = () => {

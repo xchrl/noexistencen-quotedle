@@ -18,7 +18,7 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import backgrounds from "@/lib/backgroundImages";
-import Image, { type StaticImageData } from "next/image";
+import { type StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 import { CheckedState } from "@radix-ui/react-checkbox";
 import { ScrollArea } from "./ui/scroll-area";
@@ -155,10 +155,12 @@ export default function Settings() {
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
                               key={index}
-                              src={image.src}
+                              src={image.small.src}
                               alt={`${label} ${index + 1}`}
                               className="rounded-sm duration-150 hover:brightness-60 hover:cursor-pointer"
-                              onClick={() => handleBackgroundChange(image)}
+                              onClick={() =>
+                                handleBackgroundChange(image.normal)
+                              }
                             />
                           ))}
                         </div>

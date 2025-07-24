@@ -4,6 +4,8 @@ import InfoCard from "@/components/InfoCard";
 import QuoteCard from "../components/QuoteCard";
 import { useEffect, useState } from "react";
 import loadLocalStorage from "@/lib/loadLocalStorage";
+import quotes from "@/data/quotes.json";
+import type QuoteQuestion from "@/types/QuoteQuestion";
 
 type TodayStatsType = {
   guesses: number;
@@ -30,27 +32,15 @@ export default function Home() {
   const [answered, setAnswered] = useState(0);
   const [shownNumber, setShownNumber] = useState(0);
   const [finished, setFinished] = useState<boolean>(false);
-  const [currentQuote, setCurrentQuote] = useState(null);
+  const [currentQuote, setCurrentQuote] = useState<QuoteQuestion | null>(null);
   const [quoteIds, setQuoteIds] = useState<number[]>([]);
   const [todayStats, setTodayStats] = useState<TodayStatsType>();
 
-  const fetchQuote = async (id: number) => {
-    const response = await fetch("/api/quote", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ id }),
-    });
-
-    if (!response.ok) {
-      console.log("No more quotes available");
-      return;
-    }
-
-    const quote = await response.json();
+  const fetchQuote = (id: number) => {
+    const quote = quotes[id];
     setCurrentQuote(quote);
   };
+
   // TODO: kinda messy with how i apply shownNumber, clean up
 
   // Update upon page load
