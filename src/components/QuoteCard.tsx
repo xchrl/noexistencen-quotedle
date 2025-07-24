@@ -72,35 +72,20 @@ export default function QuoteCard({
             const { guesses, correct_guesses, date } = JSON.parse(today);
             const todayDate = "2025-07-26";
 
-            if (date == todayDate) {
-              correct
-                ? localStorage.setItem(
-                    "today",
-                    JSON.stringify({
-                      guesses: (parseInt(guesses) + 1).toString(),
-                      correct_guesses: (
-                        parseInt(correct_guesses) + 1
-                      ).toString(),
-                      date: date,
-                    })
-                  )
-                : localStorage.setItem(
-                    "today",
-                    JSON.stringify({
-                      guesses: (parseInt(guesses) + 1).toString(),
-                      correct_guesses: parseInt(correct_guesses),
-                      date: date,
-                    })
-                  );
-            } else
-              localStorage.setItem(
-                "today",
-                JSON.stringify({
-                  guesses: 0,
-                  correct_guesses: 0,
-                  date: date,
-                })
-              );
+            localStorage.setItem(
+              "today",
+              JSON.stringify({
+                guesses:
+                  date == todayDate ? (parseInt(guesses) + 1).toString() : 0,
+                correct_guesses: (date == todayDate
+                  ? correct
+                    ? (parseInt(correct_guesses) + 1).toString()
+                    : parseInt(correct_guesses)
+                  : 0
+                ).toString(),
+                date: date,
+              })
+            );
           }
         } catch (err) {
           console.error(

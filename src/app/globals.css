@@ -44,7 +44,6 @@
 }
 
 body {
-  background-image: url("/background.png");
   background-repeat: no-repeat;
   background-size: cover; /* makes the image fully visible */
   background-position: center;

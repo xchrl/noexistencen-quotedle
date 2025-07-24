@@ -5,11 +5,15 @@ import QuoteCard from "../components/QuoteCard";
 import { useEffect, useState } from "react";
 import loadLocalStorage from "@/lib/loadLocalStorage";
 
+type TodayStatsType = {
+  guesses: number;
+  correct_guesses: number;
+  date: string;
+};
+
 function loadDailyProgress() {
   const today = "2025-07-26";
   const saved = localStorage.getItem("today");
-
-  console.log(saved);
 
   if (!saved || saved == "null") return 0;
 
@@ -22,12 +26,6 @@ function loadDailyProgress() {
   return 0;
 }
 
-type TodayStatsType = {
-  guesses: number;
-  correct_guesses: number;
-  date: string;
-};
-
 export default function Home() {
   const [answered, setAnswered] = useState(0);
   const [shownNumber, setShownNumber] = useState(0);
@@ -35,8 +33,6 @@ export default function Home() {
   const [currentQuote, setCurrentQuote] = useState(null);
   const [quoteIds, setQuoteIds] = useState<number[]>([]);
   const [todayStats, setTodayStats] = useState<TodayStatsType>();
-
-  // TODO: kinda messy with how i apply shownNumber, clean up
 
   const fetchQuote = async (id: number) => {
     const response = await fetch("/api/quote", {
@@ -55,36 +51,36 @@ export default function Home() {
     const quote = await response.json();
     setCurrentQuote(quote);
   };
+  // TODO: kinda messy with how i apply shownNumber, clean up
 
   // Update upon page load
-  useEffect(() => {
-    const answered = loadDailyProgress();
-    setAnswered(answered);
-    if (answered == 0) setShownNumber(1);
-    else if (answered == 5) setFinished(true);
-    else setShownNumber(answered + 1);
 
-    if (!finished) {
-      async function getSet() {
-        await fetch("/api/quoteset")
-          .then((res) => res.json())
-          .then((json) => setQuoteIds(json));
-      }
+  useEffect(() => {
+    const savedAnswered = loadDailyProgress();
+    setAnswered(savedAnswered);
+
+    async function getSet() {
+      const res = await fetch("/api/quoteset");
+      const ids = await res.json();
+      setQuoteIds(ids);
+    }
+
+    if (savedAnswered === 5) {
+      setFinished(true);
+    } else {
       getSet();
+      setShownNumber(savedAnswered > 0 ? savedAnswered + 1 : 1);
     }
   }, []);
 
-  // If quiteIds set is fetched, get a new quote
   useEffect(() => {
-    if (answered <= 4 && currentQuote === null && quoteIds.length !== 0) {
-      fetchQuote(quoteIds[answered]);
-    } else if (answered == 5) {
-      fetchQuote(quoteIds[answered - 1]);
+    if (quoteIds.length > 0 && !currentQuote && !finished) {
+      fetchQuote(quoteIds[answered]); // answered is loaded via loadDailyProgress()
     }
-  }, [quoteIds]);
+  }, [quoteIds, currentQuote, finished, answered]);
 
-  // If the quiz is finished for today, get today's stats
   useEffect(() => {
+    // If the quiz is finished for today, get today's stats
     const { today: todayStats } = loadLocalStorage();
     setTodayStats(todayStats);
   }, [finished]);
@@ -94,12 +90,12 @@ export default function Home() {
       setFinished(true);
       return;
     }
-    await fetchQuote(quoteIds[answered]).then(() =>
-      setShownNumber(answered + 1)
-    );
+
+    fetchQuote(quoteIds[answered]);
+    setShownNumber(answered + 1);
   };
 
-  if (!currentQuote) return <div>Loading...</div>;
+  if (!currentQuote && !finished) return <div>Loading...</div>;
 
   return (
     <>
@@ -107,7 +103,7 @@ export default function Home() {
         <InfoCard />
       </div>
       <div className="lg:w-1/2">
-        {!finished ? (
+        {!finished && currentQuote ? (
           <QuoteCard
             quote={currentQuote}
             onNext={loadNextQuote}

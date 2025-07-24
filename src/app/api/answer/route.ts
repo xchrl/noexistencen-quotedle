@@ -16,7 +16,6 @@ export async function POST(req: NextRequest) {
   }
 
   const isCorrect = quote.correctAnswer === selectedAnswer;
-  console.log(isCorrect);
 
   return NextResponse.json({ correct: isCorrect });
 }

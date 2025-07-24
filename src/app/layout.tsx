@@ -32,11 +32,13 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body
-        className={`${plusJakartaSans.variable} ${geistSans.variable} ${geistMono.variable} antialiased container mx-auto`}
+        className={`${plusJakartaSans.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="background"></div>
         <Navbar />
-        <main className="flex flex-col lg:flex-row gap-8">{children}</main>
+        <main className="flex flex-col lg:flex-row gap-8 container mx-auto">
+          {children}
+        </main>
       </body>
     </html>
   );

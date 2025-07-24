@@ -14,7 +14,7 @@ export async function GET() {
     [clone[i], clone[j]] = [clone[j], clone[i]];
   }
 
-  let ids = [];
+  const ids = [];
   for (let i = 0; i < clone.length; i++) {
     ids.push(clone[i].id);
   }
