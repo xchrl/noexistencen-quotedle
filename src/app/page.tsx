@@ -91,10 +91,10 @@ export default function Home() {
 
   return (
     <>
-      <div className="lg:w-1/2">
+      <div className="md:w-1/2">
         <InfoCard />
       </div>
-      <div className="lg:w-1/2">
+      <div className="md:w-1/2">
         {!finished && currentQuote ? (
           <QuoteCard
             quote={currentQuote}

@@ -16,7 +16,7 @@ import Settings from "./Settings";
 
 export default function Navbar() {
   return (
-    <nav className="w-full m-6 mt-2 lg:mt-6 container mx-auto flex flex-col lg:flex-row gap-4 items-center justify-between px-6 py-3 bg-background/70 shadow-md rounded-xl border border-red-400">
+    <nav className="w-full m-6 mt-2 md:mt-6 container mx-auto flex flex-col md:flex-row gap-4 items-center justify-between px-6 py-3 bg-background/70 shadow-md rounded-xl border border-red-400">
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Image src={logo} alt="NOexistenceN Hub Logo" height={64} priority />

@@ -137,7 +137,7 @@ export default function Settings() {
             <h2 className="text-xl font-bold">Backgrounds</h2>
             <div className="flex items-center space-x-2">
               <Accordion type="single" collapsible className="w-full">
-                <ScrollArea className="h-48 lg:h-96">
+                <ScrollArea className="h-48 md:h-96">
                   {backgrounds.map(({ label, value, images }) => (
                     <AccordionItem value={value} key={value}>
                       <AccordionTrigger>{label}</AccordionTrigger>

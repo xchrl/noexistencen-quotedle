@@ -4,23 +4,23 @@ export default function PageSkeleton() {
   return (
     <>
       {/* InfoCard skeleton version */}
-      <div className="lg:w-1/2">
+      <div className="md:w-1/2">
         <div className="bg-background/80 border border-red-400 rounded-xl shadow-lg p-8 flex flex-col gap-6">
           <Skeleton className="w-[150px] h-[16px] self-center" />
           <div className="flex flex-col gap-4 text-lg text-center">
-            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+            <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
               <Skeleton className="w-[100px] h-[16px]" />
               <span className="px-2 py-1 rounded-sm bg-secondary">
                 <Skeleton className="w-[25px] h-[25px]" />
               </span>
             </div>
-            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+            <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
               <Skeleton className="w-[100px] h-[16px]" />
               <span className="px-2 py-1 rounded-sm bg-secondary">
                 <Skeleton className="w-[25px] h-[25px]" />
               </span>
             </div>
-            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+            <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
               <Skeleton className="w-[100px] h-[16px]" />
               <span className="px-2 py-1 rounded-sm bg-secondary">
                 <Skeleton className="w-[75px] h-[25px]" />
@@ -30,7 +30,7 @@ export default function PageSkeleton() {
         </div>
       </div>
       {/* QuoteCard skeleton version */}
-      <div className="lg:w-1/2">
+      <div className="md:w-1/2">
         <div className="bg-background/80 border border-red-400 rounded-xl shadow-lg p-8 w-full flex flex-col gap-6">
           <Skeleton className="w-1/3 h-[16px] mx-auto" />
           <div className="bg-secondary/90 rounded-lg p-6 text-xl text-center font-medium border border-neutral-700 mb-2">
