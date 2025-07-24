@@ -144,12 +144,20 @@ export default function Settings() {
                       <AccordionContent>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                           {images.map((image, index) => (
-                            <Image
+                            // <Image
+                            //   key={index}
+                            //   src={image}
+                            //   alt={`${label} ${index + 1}`}
+                            //   sizes="(max-width: 480px) 256px, (max-width: 640px) 384px, (max-width: 768px) 480px, 640px"
+                            //   className="rounded-lg duration-150 hover:brightness-60 hover:cursor-pointer"
+                            //   onClick={() => handleBackgroundChange(image)}
+                            // />
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
                               key={index}
-                              src={image}
+                              src={image.src}
                               alt={`${label} ${index + 1}`}
-                              sizes="(max-width: 480px) 256px, (max-width: 640px) 384px, (max-width: 768px) 480px, 640px"
-                              className="rounded-lg duration-150 hover:brightness-60 hover:cursor-pointer"
+                              className="rounded-sm duration-150 hover:brightness-60 hover:cursor-pointer"
                               onClick={() => handleBackgroundChange(image)}
                             />
                           ))}

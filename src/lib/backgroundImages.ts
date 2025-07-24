@@ -18,12 +18,12 @@ import sartre2 from "@/assets/backgrounds/sartre/2.webp";
 import fouco1 from "@/assets/backgrounds/fouco/1.webp";
 import fouco2 from "@/assets/backgrounds/fouco/2.webp";
 import huisclos from "@/assets/backgrounds/huis-clos/1.webp";
-import misc1 from "@/assets/backgrounds/miscellaneous/1.webp";
-import misc2 from "@/assets/backgrounds/miscellaneous/2.webp";
-import misc3 from "@/assets/backgrounds/miscellaneous/3.webp";
-import misc4 from "@/assets/backgrounds/miscellaneous/4.webp";
-import misc5 from "@/assets/backgrounds/miscellaneous/5.webp";
-import misc6 from "@/assets/backgrounds/miscellaneous/6.webp";
+import misc1 from "@/assets/backgrounds/miscellaneous/1_small.webp";
+import misc2 from "@/assets/backgrounds/miscellaneous/2_small.webp";
+import misc3 from "@/assets/backgrounds/miscellaneous/3_small.webp";
+import misc4 from "@/assets/backgrounds/miscellaneous/4_small.webp";
+import misc5 from "@/assets/backgrounds/miscellaneous/5_small.webp";
+import misc6 from "@/assets/backgrounds/miscellaneous/6_small.webp";
 
 const backgrounds = [
   {
