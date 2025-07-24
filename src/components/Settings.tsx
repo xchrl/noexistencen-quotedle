@@ -148,8 +148,8 @@ export default function Settings() {
                             <AspectRatio ratio={16 / 9} key={index}>
                               <Image
                                 src={image}
-                                width={1080}
-                                height={608}
+                                width={640}
+                                height={360}
                                 alt={`${label} ${index + 1}`}
                                 className="rounded-lg duration-150 hover:brightness-60 hover:cursor-pointer"
                                 onClick={() => handleBackgroundChange(image)}
