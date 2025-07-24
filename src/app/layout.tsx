@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
@@ -39,6 +41,8 @@ export default function RootLayout({
         <main className="flex flex-col lg:flex-row gap-8 container mx-auto">
           {children}
         </main>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
