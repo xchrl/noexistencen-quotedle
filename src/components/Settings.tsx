@@ -147,7 +147,9 @@ export default function Settings() {
                           {images.map((image, index) => (
                             <AspectRatio ratio={16 / 9} key={index}>
                               <Image
-                                src={image}
+                                src={image.src}
+                                width={1080}
+                                height={608}
                                 alt={`${label} ${index + 1}`}
                                 className="rounded-lg duration-150 hover:brightness-60 hover:cursor-pointer"
                                 onClick={() => handleBackgroundChange(image)}
