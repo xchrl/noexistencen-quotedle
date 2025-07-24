@@ -23,7 +23,7 @@ import { AspectRatio } from "./ui/aspect-ratio";
 import { useEffect, useState } from "react";
 import { CheckedState } from "@radix-ui/react-checkbox";
 import { ScrollArea } from "./ui/scroll-area";
-import defaultBackground from "@/assets/backgrounds/wonderland/1.png";
+import defaultBackground from "@/assets/backgrounds/wonderland/1.webp";
 
 export default function Settings() {
   const [settings, setSettings] = useState<{
