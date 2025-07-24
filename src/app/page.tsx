@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import loadLocalStorage from "@/lib/loadLocalStorage";
 import quotes from "@/data/quotes.json";
 import type QuoteQuestion from "@/types/QuoteQuestion";
+import PageSkeleton from "@/components/PageSkeleton";
 
 type TodayStatsType = {
   guesses: number;
@@ -39,6 +40,7 @@ export default function Home() {
   const fetchQuote = (id: number) => {
     const quote = quotes[id];
     setCurrentQuote(quote);
+    console.log(quote);
   };
 
   // TODO: kinda messy with how i apply shownNumber, clean up
@@ -85,7 +87,7 @@ export default function Home() {
     setShownNumber(answered + 1);
   };
 
-  if (!currentQuote && !finished) return <div>Loading...</div>;
+  if (!currentQuote && !finished) return <PageSkeleton />;
 
   return (
     <>

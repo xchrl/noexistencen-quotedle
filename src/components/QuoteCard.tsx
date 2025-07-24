@@ -105,29 +105,34 @@ export default function QuoteCard({
       </div>
       {/* Options grid */}
       <div className="grid grid-cols-1 gap-4">
-        {quote.answers.map((answer, index) => (
+        {quote.answers.map((answer, buttonIndex) => (
           <button
             className={`transition duration-150 rounded-lg py-3 px-4 font-semibold ${
               // Is the selected answer equal to this button?
-              selectedAnswer === index
+              selectedAnswer === buttonIndex
                 ? // Is this button the correct answer?
                   isCorrect
                   ? "bg-green-600 hover:scale-110 hover:cursor-pointer"
                   : "bg-red-400 hover:scale-110 hover:cursor-pointer"
+                : // If the selected answer isn't equal to this button AND an answer has been selected,
+                // is this button the correct answer?
+                selectedAnswer != null && buttonIndex == quote.correctAnswer
+                ? "bg-green-600"
                 : "bg-secondary"
             } ${
               // Has an answer been selectedd?
               selectedAnswer === null
                 ? "hover:scale-110 hover:cursor-pointer"
-                : // Is the selected answer not equal to this button?
-                selectedAnswer !== index
+                : // Is the selected answer not equal to this button and it isn't the correct answer?
+                selectedAnswer !== buttonIndex &&
+                  buttonIndex !== quote.correctAnswer
                 ? "text-muted-foreground"
                 : ""
             }`}
-            key={index}
+            key={buttonIndex}
             onClick={() => {
               onAnswer();
-              handleAnswer(index);
+              handleAnswer(buttonIndex);
             }}
             disabled={selectedAnswer !== null}
           >
@@ -146,7 +151,7 @@ export default function QuoteCard({
       <button
         className={`${
           selectedAnswer === null ? "hidden" : ""
-        } bg-yellow-400/30 border border-yellow-400/60 p-3 rounded-lg hover:bg-yellow-400/50 hover:border-yellow-400-80 duration-150 hover:cursor-pointer`}
+        } bg-accent/30 border border-accent/60 p-3 rounded-lg hover:bg-accent/50 hover:border-accent/80 duration-150 hover:cursor-pointer`}
         onClick={() => setQuoteFromRevealed(!quoteFromRevealed)}
       >
         <p className="flex justify-between gap-4">
@@ -168,15 +173,7 @@ export default function QuoteCard({
               transition={{ duration: 0.4 }}
               className="overflow-hidden"
             >
-              <p className="mt-4 text-left">
-                This quote is from Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Debitis maiores eum, quae iusto est dolor,
-                error libero dolores reprehenderit esse neque inventore
-                excepturi in? Exercitationem alias fuga dolor quam nobis
-                blanditiis voluptate natus id laboriosam eos consectetur,
-                numquam at et inventore suscipit praesentium architecto quod
-                obcaecati tempore nam rem nemo.
-              </p>
+              <p className="mt-4 text-left">{quote.from}</p>
             </motion.div>
           )}
         </AnimatePresence>

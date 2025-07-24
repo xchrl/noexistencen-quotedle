@@ -3,6 +3,7 @@ type QuoteQuestion = {
   quote: string;
   answers: string[];
   correctAnswer: number;
+  from: string;
 };
 
 export default QuoteQuestion;

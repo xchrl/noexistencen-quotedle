@@ -1,68 +1,602 @@
 [
   {
     "id": 0,
-    "quote": "correct answer: option 1",
+    "quote": "I had poured all the feelings I wanted to suppress into her, creating...",
     "answers": [
-      "option 1 - true",
-      "option 2 - false",
-      "option 3 - false",
-      "option 4 - false"
+      "...an entity that could \"love\" in every sense of the world.",
+      "...a character that reflected \"pure love\".",
+      "...a being with the purest concept of \"love\".",
+      "...a being with unconditional \"love\"."
     ],
-    "correctAnswer": 0
+    "correctAnswer": 2,
+    "from": "This quote is said by the player as he explains what is Lilith, by the end of Chapter 4."
   },
   {
     "id": 1,
-    "quote": "correct answer: option 3",
+    "quote": "\"Common sense\" is so reliable that it often makes people...",
     "answers": [
-      "option 1 - false",
-      "option 2 - false",
-      "option 3 - true",
-      "option 4 - false"
+      "...confuse intuition with absolute truth.",
+      "...forget the \"self\" as a perspective.",
+      "...reject the need for any perspective at all.",
+      "...ignore the voices of others completely."
     ],
-    "correctAnswer": 2
+    "correctAnswer": 1,
+    "from": "This quote is said by Lilith as she explains how common sense allows us to fill in the blanks where our experiences can't explain something in Chapter 1."
   },
   {
     "id": 2,
-    "quote": "correct answer: option 2",
+    "quote": "Perhaps the entire world is nothing more than a meaningless machine, ...",
     "answers": [
-      "option 1 - false",
-      "option 2 - true",
-      "option 3 - false",
-      "option 4 - false"
+      "...endlessly cycling in the droning hum of repetition.",
+      "...waiting silently for a purpose that never comes.",
+      "...driven by random chaos without any pattern.",
+      "...constantly breaking down and failing to restart."
     ],
-    "correctAnswer": 1
+    "correctAnswer": 0,
+    "from": "This quote is said as the player bakes the strawberry cake in Chapter 1."
   },
   {
     "id": 3,
-    "quote": "correct answer: option 1",
+    "quote": "But to prove one's \"subjectivity\", it sometimes requires...",
     "answers": [
-      "option 1 - true",
-      "option 2 - false",
-      "option 3 - false",
-      "option 4 - false"
+      "...isolating oneself from any form of dialogue.",
+      "...denying the existence of all other perspectives.",
+      "...asserting one's truth without any regard for facts.",
+      "...undermining someone else's \"subjectivity\" as a prerequisite."
     ],
-    "correctAnswer": 0
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith as she discusses the nature of relationships in Chapter 3."
   },
   {
     "id": 4,
-    "quote": "correct answer: option 4",
+    "quote": "If you want to leave this place, you will inevitably...",
     "answers": [
-      "option 1 - false",
-      "option 2 - false",
-      "option 3 - false",
-      "option 4 - true"
+      "...be faced with other \"subjectivities\" fighting against yours.",
+      "...have to stand off against other \"subjectivities\"",
+      "...face the cruel world of battling other \"subjectivities\".",
+      "...be met with other \"subjectivities\" trying to undermine yours."
     ],
-    "correctAnswer": 3
+    "correctAnswer": 2,
+    "from": "This quote is said by Lilith as she discusses other subjectivities in Chapter 3."
   },
   {
     "id": 5,
-    "quote": "correct answer: option 3",
+    "quote": "I wanted to explore the possibility of...",
     "answers": [
-      "option 1 - false",
-      "option 2 - false",
-      "option 3 - true",
-      "option 4 - false"
+      "...perfect understanding between people through her.",
+      "...two people connected through pure love.",
+      "...bridging the gap by erasing individual differences.",
+      "...a being with unconditional love."
     ],
-    "correctAnswer": 2
+    "correctAnswer": 0,
+    "from": "This quote is said by the player as he explains what Lilith is, by the end of Chapter 4."
+  },
+  {
+    "id": 6,
+    "quote": "I feel like this world is full of malice. Whenever I look forward to something, ...",
+    "answers": [
+      "...the world always turns me down",
+      "...it seems like nothing ever goes my way.",
+      "...nothing good ever actually happens.",
+      "...I'm bound to be disappointed."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by the player during the ferris wheel ride in Chapter 3."
+  },
+  {
+    "id": 7,
+    "quote": "I feel like I'm never welcome, that no matter how hard I try, ...",
+    "answers": [
+      "...it's never enough.",
+      "...every effort is met with silence or disdain.",
+      "...no one actually ever praises me.",
+      "...I can never meet anyone's expectations."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by the player during the ferris wheel ride in Chapter 3."
+  },
+  {
+    "id": 8,
+    "quote": "I feel like your love is fake, that there's no way...",
+    "answers": [
+      "...this kindness doesn't hide some cruel intention behind.",
+      "...someone could be this good to me for no reason.",
+      "...such warmth can exist without a catch.",
+      "...your heart is sincere beneath the mask."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by the player during the ferris wheel ride in Chapter 3."
+  },
+  {
+    "id": 9,
+    "quote": "Hi, my name is Lilith. Sorry to bother you, but...",
+    "answers": [
+      "...is this [Player]'s house?",
+      "...could you tell me where [Player] is?",
+      "...have you seen [Player] around here?",
+      "...does [Player] live here?"
+    ],
+    "correctAnswer": 0,
+    "from": "This quote comes from the fake History Log, presented by Lilith in Chapter 1."
+  },
+  {
+    "id": 10,
+    "quote": "It has been a long time, Your Majesty. You remain...",
+    "answers": [
+      "...as majestic and courageous as ever.",
+      "...as dignified and full of spirit as ever.",
+      "...in good spirits, as ever.",
+      "...as imposing and impressive as ever."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by the Mirror (player's room furniture) during the introductory Chapter, when pressing 'Wait, what are these chaotic noises?' dialogue option, as Lilith stares into you."
+  },
+  {
+    "id": 11,
+    "quote": "If the oven truly becomes a time machine, the worldlines will shift dramatically, ...",
+    "answers": [
+      "...and the past and future will collide with devastating consequences.",
+      "...and the fabric of reality itself may unravel into chaos.",
+      "...our current lives will crumble apart, and everything will be reconstructed to a new form.",
+      "...history's threads will tear, and everything will be destroyed."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by Lilith after the oven in the player's room asserts it's a time machine in Chapter 1."
+  },
+  {
+    "id": 12,
+    "quote": "\"Identity\" represents a limitation. In defining something, ...",
+    "answers": [
+      "...we trap it within the edges of language.",
+      "...we sacrifice the ambiguity that gives it life.",
+      "...we declare what it cannot be.",
+      "...we inevitably negate other possibilities."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote comes from Sartre, disguised as a Scholar, as she explains that an \"identity\" is both a limitation and a freedom in Chapter 2."
+  },
+  {
+    "id": 13,
+    "quote": "Every day, I've been waiting here for you, thinking of you, ...",
+    "answers": [
+      "...counting stars until your arrival.",
+      "...wishing the wind would carry your name to me.",
+      "...praying for your safety under the open sky.",
+      "...dreaming of the moment you'd walk through this door."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote comes from Lilith, disguised as a Princess, after defeating the Demon Lord in Chapter 2."
+  },
+  {
+    "id": 14,
+    "quote": "Why bother writing grotesque plots? The stage is simply...",
+    "answers": [
+      "...the others!",
+      "...a playground for imagination!",
+      "...a spotlight for joy and chaos!",
+      "...the heart of every great tale!"
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is from the introduction quote at the start of Chapter 3."
+  },
+  {
+    "id": 15,
+    "quote": "We all want to take the lead in this band and express our own will through our music. To achieve this, we all need to...",
+    "answers": [
+      "...pretend we know less than we do.",
+      "...hide various truths from one another.",
+      "...be cunning and scheme behind each other's backs.",
+      "...maintain the illusion of agreement."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by Lilith as she explains why she badmouthed Sartre and Foucault behind their backs in Chapter 3."
+  },
+  {
+    "id": 16,
+    "quote": "Yes, yes! It's the storyline RPG I worked through the night to complete! The...",
+    "answers": [
+      "...ultimate tale of friendship, love, and mandrakes!",
+      "...most anticipated narrative-driven role-playing game of the year!",
+      "...legendary epic every gamer dreams of!",
+      "...best-selling, pixel-perfect fantasy experience!"
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said as Lilith explains what \"The Morphean Codex: The forest of Silver Shallots\" is to the player at the beginning of Chapter 2."
+  },
+  {
+    "id": 17,
+    "quote": "I love you so deeply - it's not just a hobby, ...",
+    "answers": [
+      "...it's the fire that keeps me alive.",
+      "...it's an obsession I proudly wear.",
+      "...it's devotion etched into my soul.",
+      "...it's a way of life, my spiritual pillar."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote comes from The Black Notebook, the contents of which are shown near the end of Chapter 4."
+  },
+  {
+    "id": 18,
+    "quote": "Games are such incredible vessels! By adopting the shell of a character, ...",
+    "answers": [
+      "...we take shape and can start to converse.",
+      "...we embody roles that transcend words.",
+      "...we find voices we never knew we had.",
+      "...we gain a stage for our hidden selves."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith at the start of Chapter 5, when she explains why she chose a video game as a conversation medium."
+  },
+  {
+    "id": 19,
+    "quote": "When such \"relationships with others\" expand, the specific \"others\"...",
+    "answers": [
+      "...dissolve into concepts we merely reference.",
+      "...fade into systems, norms and ideals.",
+      "...hide themselves, becoming more abstract.",
+      "...lose their faces and become ideas."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by Lilith during Chapter 5, when she recalls the philosophy behind Chapter 4."
+  },
+  {
+    "id": 20,
+    "quote": "Yes, \"common sense\" isn't absolute; ...",
+    "answers": [
+      "...its value shifts depending on who holds it.",
+      "...not every person will have the same common sense as you.",
+      "...everything depends on whether you choose to believe it.",
+      "...belief is the only thing keeping it upright."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote comes from Lilith during Chapter 5, as she recalls the philosophy behind Chapter 1."
+  },
+  {
+    "id": 21,
+    "quote": "It's a limitation because when we say something is a certain way, ...",
+    "answers": [
+      "...it can't identify as anything else.",
+      "...we are also saying it is not something else.",
+      "...we narrow its meaning and potential.",
+      "...we exclude every other interpretation."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by LIlith during Chapter 5, as she recalls the philosophy behind Chapter 2."
+  },
+  {
+    "id": 22,
+    "quote": "Everyone wants their \"subjectivity\" to be...",
+    "answers": [
+      "...affirmed and uses others as fuel for their progression.",
+      "...recognized, even if only by a single voice.",
+      "...justified, regardless of truth or logic.",
+      "...the one that is perfect and all-encompassing."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith during Chapter 5, as she recalls the philosophy behind Chapter 3."
+  },
+  {
+    "id": 23,
+    "quote": "People wear masks, put on costumes, and...",
+    "answers": [
+      "...step onto the stage, playing roles they wish to present.",
+      "...hope someone will applaud their illusion.",
+      "...act out who they want others to believe they are.",
+      "...hide their true selves in layers of performance."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith during Chapter 5, as she recalls the philosophy behind Chapter 3."
+  },
+  {
+    "id": 24,
+    "quote": "Individuals are always lonely, never able to present their fully transparent selves, because...",
+    "answers": [
+      "...they fear the truths they hid so deep come out.",
+      "...truth is too sharp to offer freely.",
+      "...they can't bear to be fully seen.",
+      "...some parts are too despicable, insignificant, ugly, unbearable."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith during Chapter 5, as she recalls the philosophy behind Chapter 3."
+  },
+  {
+    "id": 25,
+    "quote": "That day, I opened the window of my room, and...",
+    "answers": [
+      "...the world felt vivid and colorful.",
+      "...sunlight filled every corner.",
+      "...hope fluttered in like a bird.",
+      "...everything glowed in golden silence."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by the player at the end of Chapter 5, particularly after getting the good ending and affirming that Lilith does indeed exist."
+  },
+  {
+    "id": 26,
+    "quote": "I'll wait for you here. Oh, remember to...",
+    "answers": [
+      "...come back safely.",
+      "...get ingredients for the cake!",
+      "...bring back a little cake.",
+      "...grab some tea on the way."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by Lilith at the end of Chapter 5, after getting the good ending."
+  },
+  {
+    "id": 27,
+    "quote": "Yes, you exist. I trust you. I hope for you. I need you. Ah, yes. As long as I can still embrace you...",
+    "answers": [
+      "...Then nothing else matters.",
+      "...Then I'm able to face whatever comes my way.",
+      "...Then this moment can last forever.",
+      "...Then I have the courage to face the cruel world."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by the player at the end of Chapter 5, after getting the good ending."
+  },
+  {
+    "id": 28,
+    "quote": "When I regained consciousness... The black notebook appeared in my vision-",
+    "answers": [
+      "-now broken to pieces.",
+      "-its' pages scribbled out and unreadable.",
+      "-destroyed beyond recognition.",
+      "-shattered to pieces."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by the player at the end of Chapter 5, after getting the bad ending. How could you?"
+  },
+  {
+    "id": 29,
+    "quote": "And I, was about to step into the...",
+    "answers": [
+      "...unforgiving world that I had always feared.",
+      "...truth I had always feared.",
+      "...unknown, cruel, bloody, real tomorrow.",
+      "...echo of a life I couldn't escape."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by the player at the end of Chapter 5, after getting the bad ending. How could you?"
+  },
+  {
+    "id": 30,
+    "quote": "Look at the clouds in the evening sky; ...",
+    "answers": [
+      "...they drift like quiet thoughts.",
+      "...they're so soothing.",
+      "...they carry away all worries.",
+      "...they glow like soft embers."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by the player when he tries to talk to the Stranger in the park during Chapter 3."
+  },
+  {
+    "id": 31,
+    "quote": "Even though visually, the outfit doesn't seem any different, ...",
+    "answers": [
+      "...you still believe it changed.",
+      "...you complimented it anyway.",
+      "...you act like it looks different anyway.",
+      "...you're still willing to believe me."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith as the player compliments her seemingly-different outfit as they reach the theme park in Chapter 3."
+  },
+  {
+    "id": 32,
+    "quote": "Let me take a look... \"Due to disaster damage, this theme park...",
+    "answers": [
+      "...was closed indefinitely.\"",
+      "...was abandoned on July 20, 1999.\"",
+      "...ceased all operations on July 20, 1999.\"",
+      "...is no longer in use since July 20, 1999.\""
+    ],
+    "correctAnswer": 1,
+    "from": "This quote comes from a sign that's on the Chapter 3's theme park's gate."
+  },
+  {
+    "id": 33,
+    "quote": "Such a strange feeling. The world is so quiet, so quiet it...",
+    "answers": [
+      "...feels like it's just the two of us left.",
+      "...makes even our breaths feel loud.",
+      "...seems frozen in this moment.",
+      "...echoes with the silence of everything else."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said when Lilith and the player reach the highest point on the ferris wheel in Chapter 3."
+  },
+  {
+    "id": 34,
+    "quote": "Reality is truly bewildering. I want to go to where you are, but how? Or maybe find you here...",
+    "answers": [
+      "...Would I reach that place if I died?",
+      "...Would you hear me if I screamed, wherever you are?",
+      "...Could death make it happen?",
+      "...Could I reach you if I gave up everything?"
+    ],
+    "correctAnswer": 2,
+    "from": "This quote comes from The Black Notebook, the contents of which are shown near the end of Chapter 4."
+  },
+  {
+    "id": 35,
+    "quote": "They say there's an afterlife, right? If dying could fulfill my wish, ...",
+    "answers": [
+      "...then what's left for me besides death?",
+      "...there’s no reason to keep waiting.",
+      "...I might as well die now.",
+      "...maybe I should die already."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote comes from The Black Notebook, the contents of which are shown near the end of Chapter 4."
+  },
+  {
+    "id": 36,
+    "quote": "Can you imagine? Every moment of my life I think about this question - ...",
+    "answers": [
+      "...why can't I let go?",
+      "...why must I be alone?",
+      "...why aren't you with me?",
+      "...why don't you exist?"
+    ],
+    "correctAnswer": 3,
+    "from": "This quote comes from The Black Notebook, the contents of which are shown near the end of Chapter 4."
+  },
+  {
+    "id": 37,
+    "quote": "I think I should sleep now, maybe that'll help me. I'm worried...",
+    "answers": [
+      "...I won't be able to meet you.",
+      "..., I can't take it anymore, I'm in so much pain right now.",
+      "...that I'll never see you.",
+      "...rest won't be enough this time."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote comes from The Black Notebook, the contents of which are shown near the end of Chapter 4."
+  },
+  {
+    "id": 38,
+    "quote": "This story serves as a metaphor for \"relationships with others\" - everyone wants to...",
+    "answers": [
+      "...prove they are above others, everyone wants to use others as fuel for their own progress, even in intimate relationships.",
+      "...outshine the rest, no matter what it takes.",
+      "...control the narrative and define others' roles.",
+      "...stand tallest even if it means stepping on someone."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith as she discusses the nature of relationships in Chapter 3."
+  },
+  {
+    "id": 39,
+    "quote": "Lilith and I held each other tightly, our hearts feeling lighter than ever before. With this feeling, ...",
+    "answers": [
+      "...nothing felt impossible anymore.",
+      "...even silence was filled with joy.",
+      "...the sky felt within reach.",
+      "...it seemed we could go anywhere in the world."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by the player at the end of Chapter 5, after getting the good ending."
+  },
+  {
+    "id": 40,
+    "quote": "Do you know? Sometimes my heart aches because...",
+    "answers": [
+      "...my feelings keep echoing back in silence.",
+      "...you can't hear how much I love you.",
+      "...I don't know if you'll ever recognize my love.",
+      "...I can't convey my love to you."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote comes from The Black Notebook, the contents of which are shown near the end of Chapter 4."
+  },
+  {
+    "id": 41,
+    "quote": "I saw all the sincerity in the world within her. I saw...",
+    "answers": [
+      "...all the falsehood in the world within her.",
+      "...all the confusion in the world within her.",
+      "...all the silence in the world within her.",
+      "...all the emptiness in the world within her."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by the player at the end of Chapter 4."
+  },
+  {
+    "id": 42,
+    "quote": "I regarded her as the incarnation of a holy angel. I regarded her as the...",
+    "answers": [
+      "...image of a dreadful ghost.",
+      "...image of a terrifying demon.",
+      "...image of a cursed spirit.",
+      "...image of a vengeful being."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by the player at the end of Chapter 4."
+  },
+  {
+    "id": 43,
+    "quote": "I wanted to embrace her existence. I wanted to...",
+    "answers": [
+      "...forget her existence.",
+      "...erase her existence.",
+      "...destroy her existence.",
+      "...deny her existence."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by the player at the end of Chapter 4."
+  },
+  {
+    "id": 44,
+    "quote": "I didn't have the courage to express \"love\", so...",
+    "answers": [
+      "...I let Lilith express it for me.",
+      "...I made Lilith so that she would express it for me.",
+      "...I created Lilith with the intention of her expressing it for me.",
+      "...I waited for Lilith to express it for me."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by the player at the end of Chapter 4."
+  },
+  {
+    "id": 45,
+    "quote": "I didn't have the courage to demand \"love\", so...",
+    "answers": [
+      "...I ordered Lilith to \"love\" me.",
+      "...I demanded of Lilith to \"love\" me.",
+      "...I let Lilith \"love\" me.",
+      "...I convinced Lilith to \"love\" me."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by the player at the end of Chapter 4."
+  },
+  {
+    "id": 46,
+    "quote": "I'm not omniscient, which is why...",
+    "answers": [
+      "...every new experience is a delightful surprise.",
+      "...every experience in this world is delightful.",
+      "...I can treasure every delightful moment.",
+      "...I can experience new and delightful surprises in our conversations."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote comes from Sartre, disguised as a Scholar, as she explains why she is happy for her identity to be that of a Scholar in Chapter 2."
+  },
+  {
+    "id": 47,
+    "quote": "We are not destinations; we are...",
+    "answers": [
+      "...paths in constant motion.",
+      "...bridges leading toward destinations.",
+      "...chapters in our own stories.",
+      "...paths leading toward destinations."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote comes from Sartre, disguised as a Scholar, as she explains why she is happy for her identity to be that of a Scholar in Chapter 2."
+  },
+  {
+    "id": 48,
+    "quote": "After bidding farewell to the scholar, Lilith and I ventured deeper into the forest. After a legendary adventure, we...",
+    "answers": [
+      "...stood victorious above the Demon Lord.",
+      "...emerged before the Demon Lord's castle.",
+      "...finally arrived before the Demon Lord.",
+      "...stood in front of the Demon Lord."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is shown after the player finishes talking with Sartre (scholar) in Chapter 2."
+  },
+  {
+    "id": 49,
+    "quote": "\"As music plays, the Demon Lord begins...",
+    "answers": [
+      "...tapping their hands and feet to the rhythm.",
+      "...laughing in perfect tempo.",
+      "...bouncing along in sync.",
+      "...grooving with surprisingly good timing."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is shown after the player takes out the record player during the fight with the Demon Lord in Chapter 2."
   }
 ]
