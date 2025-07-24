@@ -146,7 +146,7 @@ export default function Settings() {
                         <div className="grid grid-cols-3 gap-4">
                           {images.map((image, index) => (
                             <AspectRatio ratio={16 / 9} key={index}>
-                              <Image
+                              <img
                                 src={image.src}
                                 width={1080}
                                 height={608}
