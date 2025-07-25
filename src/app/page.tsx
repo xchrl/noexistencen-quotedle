@@ -15,7 +15,7 @@ type TodayStatsType = {
 };
 
 function loadDailyProgress() {
-  const today = "2025-07-26";
+  const today = new Date().toISOString().split("T")[0];
   const saved = localStorage.getItem("today");
 
   if (!saved || saved == "null") return 0;
@@ -56,10 +56,11 @@ export default function Home() {
       setQuoteIds(ids);
     }
 
+    getSet();
+
     if (savedAnswered === 5) {
       setFinished(true);
     } else {
-      getSet();
       setShownNumber(savedAnswered > 0 ? savedAnswered + 1 : 1);
     }
   }, []);

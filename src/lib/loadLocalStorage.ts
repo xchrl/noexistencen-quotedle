@@ -36,11 +36,11 @@ export default function loadLocalStorage() {
   } else {
     try {
       const parsedToday = JSON.parse(today);
-      if (parsedToday.date !== "2025-07-26") {
+      if (parsedToday.date !== new Date().toISOString().split("T")[0]) {
         const resetToday = {
           guesses: 0,
           correct_guesses: 0,
-          date: "2025-07-26",
+          date: new Date().toISOString().split("T")[0],
         };
         localStorage.setItem("today", JSON.stringify(resetToday));
         today = JSON.stringify(resetToday);
@@ -50,7 +50,7 @@ export default function loadLocalStorage() {
       const resetToday = {
         guesses: 0,
         correct_guesses: 0,
-        date: "2025-07-26",
+        date: new Date().toISOString().split("T")[0],
       };
       localStorage.setItem("today", JSON.stringify(resetToday));
       today = JSON.stringify(resetToday);

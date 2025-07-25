@@ -64,7 +64,7 @@ export default function QuoteCard({
         localStorage.setItem("today", "{}");
       } else {
         const { guesses, correct_guesses, date } = JSON.parse(today);
-        const todayDate = "2025-07-26";
+        const todayDate = new Date().toISOString().split("T")[0];
 
         localStorage.setItem(
           "today",

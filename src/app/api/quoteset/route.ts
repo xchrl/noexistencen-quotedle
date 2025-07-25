@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import seedrandom from "seedrandom";
 
 export function GET() {
-  const today = "2024-07-24";
+  const today = new Date().toISOString().split("T")[0];
   const rng = seedrandom(today);
 
   const clone = [...quotes];
