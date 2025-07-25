@@ -34,11 +34,18 @@ function cookieExists(name: string) {
 export default function Settings() {
   const [settings, setSettings] = useState<{
     storage: boolean;
-    background_source: string;
+    background: string;
   }>({
     storage: true,
-    background_source: "",
+    background: "",
   });
+
+  const setBackgroundImage = (src: string) => {
+    const background = document.getElementById("background");
+    if (background) {
+      background.style.backgroundImage = `url(${src})`;
+    }
+  };
 
   useEffect(() => {
     const storageSettings = localStorage.getItem("settings");
@@ -49,37 +56,45 @@ export default function Settings() {
           ...prevSettings,
           storage: settingsData.storage,
         }));
-      if (settingsData.background_source)
+      if (settingsData.background)
         setSettings((prevSettings) => ({
           ...prevSettings,
-          background_source: settingsData.background_source,
+          background: settingsData.background,
         }));
     } else {
       localStorage.setItem(
         "settings",
         JSON.stringify({
-          background_source: defaultBackground.src,
+          background: defaultBackground.src,
           storage: true,
         })
       );
-      document.body.style.backgroundImage = `url("${defaultBackground.src}")`;
+      setBackgroundImage(defaultBackground.src);
     }
 
     const backgroundCookieExists = cookieExists("background");
     if (!backgroundCookieExists) {
-      document.cookie = `background=${encodeURIComponent(
-        defaultBackground.src
-      )}; path=/; max-age=31536000`;
-      document.body.style.backgroundImage = `url("${defaultBackground.src}")`;
+      if (storageSettings) {
+        const bg = JSON.parse(storageSettings).background;
+        document.cookie = `background=${encodeURIComponent(
+          bg
+        )}; path=/; max-age=31536000`;
+        setBackgroundImage(bg);
+      } else {
+        document.cookie = `background=${encodeURIComponent(
+          defaultBackground.src
+        )}; path=/; max-age=31536000`;
+        setBackgroundImage(defaultBackground.src);
+      }
     }
   }, []);
 
   const handleBackgroundChange = (image: StaticImageData) => {
-    document.body.style.backgroundImage = `url("${image.src}")`;
+    setBackgroundImage(image.src);
     const settings = localStorage.getItem("settings");
     if (settings) {
       const settingsData = JSON.parse(settings);
-      settingsData.background_source = image.src;
+      settingsData.background = image.src;
       localStorage.setItem("settings", JSON.stringify(settingsData));
     }
 

@@ -9,19 +9,19 @@ import { cookies } from "next/headers";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-  preload: true,
+  preload: false,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-  preload: true,
+  preload: false,
 });
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
   subsets: ["latin"],
-  preload: true,
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -43,9 +43,13 @@ export default async function RootLayout({
     <html lang="pl">
       <body
         className={`${plusJakartaSans.className} ${geistSans.className} ${geistMono.className} antialiased`}
-        style={src ? { backgroundImage: `url(${src})` } : {}}
       >
-        <header className="px-4 md:px-0">
+        <div
+          id="background"
+          className="fixed top-0 left-0 w-screen h-[100lvh] -z-10 bg-cover bg-center"
+          style={src ? { backgroundImage: `url(${src})` } : {}}
+        ></div>
+        <header className="px-4 mt-6 md:px-0">
           <Navbar />
         </header>
         <main className="flex flex-col md:flex-row gap-2 md:gap-8 container mx-auto px-4 md:px-0 my-4">

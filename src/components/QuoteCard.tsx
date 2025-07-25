@@ -7,6 +7,8 @@ import quotes from "@/data/quotes.json";
 import type QuoteQuestion from "@/types/QuoteQuestion";
 import { AnimatePresence, motion } from "framer-motion";
 import uploadLocalStorage from "@/lib/uploadLocalStorage";
+import { Badge } from "./ui/badge";
+import { Separator } from "./ui/separator";
 
 type QuoteCardProps = {
   quote: QuoteQuestion;
@@ -59,12 +61,14 @@ export default function QuoteCard({
           })
         );
       }
+
       const today = localStorage.getItem("today");
       if (today == "null" || today == null) {
         localStorage.setItem("today", "{}");
       } else {
         const { guesses, correct_guesses, date } = JSON.parse(today);
         const todayDate = new Date().toISOString().split("T")[0];
+        const previousQuoteData = JSON.parse(today).quoteData;
 
         localStorage.setItem(
           "today",
@@ -76,6 +80,14 @@ export default function QuoteCard({
                 : parseInt(correct_guesses)
               : 0
             ).toString(),
+            quoteData: [
+              ...previousQuoteData,
+              {
+                id: quote.id,
+                answer: index,
+                correct: correct,
+              },
+            ],
             date: date,
           })
         );
@@ -104,14 +116,15 @@ export default function QuoteCard({
       {/* Heading */}
       <h2 className="text-xl font-bold text-center">Quote {number} / 5</h2>
       {/* Quote area */}
-      <div className="bg-secondary/90 rounded-lg p-6 text-xl text-center font-medium border border-neutral-700 mb-2">
+      <div className="bg-secondary/90 rounded-lg p-6 text-xl text-center font-medium border border-neutral-700">
         {quote.quote}
       </div>
+      <Separator orientation="horizontal" />
       {/* Options grid */}
       <div className="grid grid-cols-1 gap-4">
         {quote.answers.map((answer, buttonIndex) => (
           <button
-            className={`transition duration-150 rounded-lg py-3 px-4 font-semibold ${
+            className={`transition duration-150 rounded-lg py-3 px-4 font-semibold flex justify-center gap-2 relative ${
               // Is the selected answer equal to this button?
               selectedAnswer === buttonIndex
                 ? // Is this button the correct answer?
@@ -140,7 +153,18 @@ export default function QuoteCard({
             }}
             disabled={selectedAnswer !== null}
           >
-            {answer}
+            {answer}{" "}
+            {selectedAnswer === buttonIndex ? (
+              isCorrect ? (
+                <Badge variant="correct">Correct</Badge>
+              ) : (
+                <Badge variant="incorrect">Incorrect</Badge>
+              )
+            ) : selectedAnswer != null && buttonIndex == quote.correctAnswer ? (
+              <Badge variant="correct">Correct</Badge>
+            ) : (
+              ""
+            )}
           </button>
         ))}
       </div>

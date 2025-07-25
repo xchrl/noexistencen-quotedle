@@ -25,35 +25,27 @@ export default function loadLocalStorage() {
 
   let today = localStorage.getItem("today");
 
+  const todayDefaultObject = {
+    guesses: 0,
+    correct_guesses: 0,
+    quoteData: [],
+    date: new Date().toISOString().split("T")[0],
+  };
+
   if (!today) {
-    const todayObject = {
-      guesses: 0,
-      correct_guesses: 0,
-      date: "2024-07-26",
-    };
-    localStorage.setItem("today", JSON.stringify(todayObject));
-    today = JSON.stringify(todayObject); // update the variable with the same string
+    localStorage.setItem("today", JSON.stringify(todayDefaultObject));
+    today = JSON.stringify(todayDefaultObject); // update the variable with the same string
   } else {
     try {
       const parsedToday = JSON.parse(today);
       if (parsedToday.date !== new Date().toISOString().split("T")[0]) {
-        const resetToday = {
-          guesses: 0,
-          correct_guesses: 0,
-          date: new Date().toISOString().split("T")[0],
-        };
-        localStorage.setItem("today", JSON.stringify(resetToday));
-        today = JSON.stringify(resetToday);
+        localStorage.setItem("today", JSON.stringify(todayDefaultObject));
+        today = JSON.stringify(todayDefaultObject);
       }
     } catch {
       // If `today` is invalid JSON, reset it
-      const resetToday = {
-        guesses: 0,
-        correct_guesses: 0,
-        date: new Date().toISOString().split("T")[0],
-      };
-      localStorage.setItem("today", JSON.stringify(resetToday));
-      today = JSON.stringify(resetToday);
+      localStorage.setItem("today", JSON.stringify(todayDefaultObject));
+      today = JSON.stringify(todayDefaultObject);
     }
   }
 

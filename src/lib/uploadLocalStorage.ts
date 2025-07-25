@@ -24,7 +24,9 @@ export default async function uploadLocalStorage() {
   formData.append("uuid", uuid);
   formData.append("data", blob, "localStorage.json");
 
-  console.log(formData);
+  console.log(
+    "localStorage changed and user allows sending data, sending localStorage data..."
+  );
 
   await fetch("/api/uploadtoblob", {
     method: "POST",

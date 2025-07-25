@@ -10,9 +10,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Missing UUID" }, { status: 400 });
   }
 
-  const file = new Blob([data], { type: "application/json" });
-
-  const uploaded = await put(`user-data/${uuid}.json`, file, {
+  const uploaded = await put(`user-data/${uuid}.json`, data, {
     access: "public",
     allowOverwrite: true,
     contentType: "application/json",

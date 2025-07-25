@@ -3,16 +3,10 @@
 import InfoCard from "@/components/InfoCard";
 import QuoteCard from "../components/QuoteCard";
 import { useEffect, useState } from "react";
-import loadLocalStorage from "@/lib/loadLocalStorage";
 import quotes from "@/data/quotes.json";
 import type QuoteQuestion from "@/types/QuoteQuestion";
 import PageSkeleton from "@/components/PageSkeleton";
-
-type TodayStatsType = {
-  guesses: number;
-  correct_guesses: number;
-  date: string;
-};
+import FinishedCard from "@/components/FinishedCard";
 
 function loadDailyProgress() {
   const today = new Date().toISOString().split("T")[0];
@@ -35,7 +29,6 @@ export default function Home() {
   const [finished, setFinished] = useState<boolean>(false);
   const [currentQuote, setCurrentQuote] = useState<QuoteQuestion | null>(null);
   const [quoteIds, setQuoteIds] = useState<number[]>([]);
-  const [todayStats, setTodayStats] = useState<TodayStatsType>();
 
   const fetchQuote = (id: number) => {
     const quote = quotes[id];
@@ -71,12 +64,6 @@ export default function Home() {
     }
   }, [quoteIds, currentQuote, finished, answered]);
 
-  useEffect(() => {
-    // If the quiz is finished for today, get today's stats
-    const { today: todayStats } = loadLocalStorage();
-    setTodayStats(todayStats);
-  }, [finished]);
-
   const loadNextQuote = async () => {
     if (answered >= 5) {
       setFinished(true);
@@ -103,17 +90,7 @@ export default function Home() {
             number={shownNumber}
           />
         ) : (
-          <div className="bg-background/80 border border-red-400 rounded-xl shadow-lg p-8 w-full flex flex-col gap-6">
-            <h2 className="text-xl font-bold text-center">Finished!</h2>
-            <div className="bg-secondary/90 rounded-lg p-6 text-xl text-center font-medium border border-neutral-700 mb-2">
-              {todayStats && (
-                <>
-                  <p>Your guesses: {todayStats.guesses}</p>
-                  <p>Correct guesses: {todayStats.correct_guesses}</p>
-                </>
-              )}
-            </div>
-          </div>
+          <FinishedCard />
         )}
       </div>
     </>
