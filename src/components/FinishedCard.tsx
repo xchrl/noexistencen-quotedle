@@ -64,7 +64,12 @@ export default function FinishedCard() {
             </p>
             <p>Let&apos;s see your performance:</p>
           </header>
-          <Carousel orientation="vertical" className="mt-10 mb-8 md:my-8">
+          <Carousel
+            orientation="vertical"
+            className="mt-10 mb-8 md:my-8"
+            opts={{ dragFree: true }}
+            style={{ userSelect: "none" }}
+          >
             <CarouselPrevious />
             <CarouselContent className="h-[400px]">
               {todayStats.quoteData.map(({ id, answer, correct }, index) => {
@@ -101,7 +106,7 @@ export default function FinishedCard() {
                       </CardContent>
                       <CardFooter>
                         <button
-                          className={`bg-accent/30 border border-accent/60 p-3 rounded-lg hover:bg-accent/50 hover:border-accent/80 duration-150 hover:cursor-pointer w-full`}
+                          className="bg-accent/30 border border-accent/60 p-3 rounded-lg hover:bg-accent/50 hover:border-accent/80 duration-150 hover:cursor-pointer w-full text-center md:text-left"
                           onClick={() => handleToggle(index)}
                         >
                           <p className="flex justify-between gap-4">
