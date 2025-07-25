@@ -40,7 +40,6 @@ export default function Home() {
   const fetchQuote = (id: number) => {
     const quote = quotes[id];
     setCurrentQuote(quote);
-    console.log(quote);
   };
 
   // TODO: kinda messy with how i apply shownNumber, clean up

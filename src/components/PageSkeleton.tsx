@@ -42,16 +42,6 @@ export default function PageSkeleton() {
             <Skeleton className="w-full py-6 mx-auto" />
             <Skeleton className="w-full py-6 mx-auto" />
           </div>
-          <button
-            className={`bg-secondary p-4 rounded-lg flex justify-center gap-4 transition duration-150 hover:scale-110 hover:cursor-pointer`}
-          >
-            <Skeleton className="w-[80px] h-[16px]" />
-          </button>
-          <button
-            className={`bg-accent/30 border border-accent/60 p-3 rounded-lg hover:bg-accent/50 hover:border-accent/80 duration-150 hover:cursor-pointer`}
-          >
-            <Skeleton className="w-[150px] h-[16px] my-1" />
-          </button>
         </div>
       </div>
     </>

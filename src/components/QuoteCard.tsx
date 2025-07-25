@@ -92,6 +92,7 @@ export default function QuoteCard({
   const handleNext = () => {
     setSelectedAnswer(null);
     setIsCorrect(null);
+    setQuoteFromRevealed(false);
     onNext();
   };
 

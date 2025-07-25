@@ -4,39 +4,47 @@ import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
+import { cookies } from "next/headers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  preload: true,
 });
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
   subsets: ["latin"],
+  preload: true,
 });
 
 export const metadata: Metadata = {
-  title: "NOexistenceN Hub",
+  title: "NOexistenceNdle",
   description:
     "A `finish the quote` quiz game based on `The NOexistenceN of you AND me`.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const background = cookieStore.get("background");
+  const src = background ? decodeURIComponent(background.value) : null;
+
   return (
     <html lang="pl">
       <body
-        className={`${plusJakartaSans.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${plusJakartaSans.className} ${geistSans.className} ${geistMono.className} antialiased`}
+        style={src ? { backgroundImage: `url(${src})` } : {}}
       >
-        <div className="background"></div>
         <header className="px-4 md:px-0">
           <Navbar />
         </header>

@@ -24,6 +24,12 @@ import { CheckedState } from "@radix-ui/react-checkbox";
 import { ScrollArea } from "./ui/scroll-area";
 import defaultBackground from "@/assets/backgrounds/wonderland/1.webp";
 
+function cookieExists(name: string) {
+  return document.cookie
+    .split("; ")
+    .some((cookie) => cookie.startsWith(name + "="));
+}
+
 export default function Settings() {
   const [settings, setSettings] = useState<{
     storage: boolean;
@@ -37,7 +43,6 @@ export default function Settings() {
     const storageSettings = localStorage.getItem("settings");
     if (storageSettings) {
       const settingsData = JSON.parse(storageSettings);
-      document.body.style.backgroundImage = `url("${settingsData.background_source}")`;
       if (settingsData.storage !== undefined)
         setSettings((prevSettings) => ({
           ...prevSettings,
@@ -58,6 +63,14 @@ export default function Settings() {
       );
       document.body.style.backgroundImage = `url("${defaultBackground.src}")`;
     }
+
+    const backgroundCookieExists = cookieExists("background");
+    if (!backgroundCookieExists) {
+      document.cookie = `background=${encodeURIComponent(
+        defaultBackground.src
+      )}; path=/; max-age=31536000`;
+      document.body.style.backgroundImage = `url("${defaultBackground.src}")`;
+    }
   }, []);
 
   const handleBackgroundChange = (image: StaticImageData) => {
@@ -68,6 +81,10 @@ export default function Settings() {
       settingsData.background_source = image.src;
       localStorage.setItem("settings", JSON.stringify(settingsData));
     }
+
+    document.cookie = `background=${encodeURIComponent(
+      image.src
+    )}; path=/; max-age=31536000`;
   };
 
   const handleGeneralSettingsChange = (setting: string, checked: boolean) => {
