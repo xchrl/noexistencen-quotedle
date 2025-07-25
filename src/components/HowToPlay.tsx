@@ -20,7 +20,7 @@ export default function HowToPlay() {
         </Button>
       </DialogTrigger>
       <DialogContent>
-        <ScrollArea className="h-120 md:h-fit">
+        <ScrollArea className="h-100 sm:h-120 md:h-fit">
           <DialogHeader>
             <DialogTitle>How to play</DialogTitle>
             <DialogDescription>

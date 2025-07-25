@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
             noexistencendle | Last updated: 25-07-2025
           </DialogDescription>
         </DialogHeader>
-        <ScrollArea className="h-100 md:h-180">
+        <ScrollArea className="h-100 sm:h-120 md:h-180">
           <div className="wrapper flex flex-col gap-6">
             <div>
               <p>
