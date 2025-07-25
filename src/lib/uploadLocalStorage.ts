@@ -18,7 +18,8 @@ export default async function uploadLocalStorage() {
 
   const localStorageData = JSON.stringify(localStorage);
   const blob = new Blob([localStorageData], { type: "application/json" });
-  const uuid = getCookieValue("uuid") || getUserUUID();
+  const uuid =
+    getCookieValue("uuid") || localStorage.getItem("uuid") || getUserUUID();
 
   const formData = new FormData();
   formData.append("uuid", uuid);

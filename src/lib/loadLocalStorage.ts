@@ -1,3 +1,5 @@
+import getUserUUID from "./getUserUUID";
+
 type DailyModeStatsType = {
   total_guesses: number;
   correct_guesses: number;
@@ -47,6 +49,12 @@ export default function loadLocalStorage() {
       localStorage.setItem("today", JSON.stringify(todayDefaultObject));
       today = JSON.stringify(todayDefaultObject);
     }
+  }
+
+  const uuid = getUserUUID();
+  const uuidLocalStorage = localStorage.getItem("uuid");
+  if (!uuidLocalStorage) {
+    localStorage.setItem("uuid", uuid);
   }
 
   return {
