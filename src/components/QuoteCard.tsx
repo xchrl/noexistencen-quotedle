@@ -6,6 +6,7 @@ import { useState } from "react";
 import quotes from "@/data/quotes.json";
 import type QuoteQuestion from "@/types/QuoteQuestion";
 import { AnimatePresence, motion } from "framer-motion";
+import uploadLocalStorage from "@/lib/uploadLocalStorage";
 
 type QuoteCardProps = {
   quote: QuoteQuestion;
@@ -79,6 +80,8 @@ export default function QuoteCard({
           })
         );
       }
+
+      uploadLocalStorage();
     } catch (err) {
       console.error(
         "An error occured while writing your data to localStorage: ",

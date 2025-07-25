@@ -1,6 +1,7 @@
 "use client";
 
 import loadLocalStorage from "@/lib/loadLocalStorage";
+import uploadLocalStorage from "@/lib/uploadLocalStorage";
 import { useEffect, useState } from "react";
 
 export default function InfoCard() {
@@ -10,7 +11,7 @@ export default function InfoCard() {
   const [totalGuesses, setTotalGuesses] = useState<number>(0);
 
   useEffect(() => {
-    const handleCustomChange = () => {
+    const handleCustomChange = async () => {
       const { dailyModeStats } = loadLocalStorage();
       if (dailyModeStats) {
         setTotalGuesses(JSON.parse(dailyModeStats).total_guesses);

@@ -23,6 +23,7 @@ import { useEffect, useState } from "react";
 import { CheckedState } from "@radix-ui/react-checkbox";
 import { ScrollArea } from "./ui/scroll-area";
 import defaultBackground from "@/assets/backgrounds/wonderland/1.webp";
+import uploadLocalStorage from "@/lib/uploadLocalStorage";
 
 function cookieExists(name: string) {
   return document.cookie
@@ -63,6 +64,7 @@ export default function Settings() {
       );
       document.body.style.backgroundImage = `url("${defaultBackground.src}")`;
     }
+    uploadLocalStorage();
 
     const backgroundCookieExists = cookieExists("background");
     if (!backgroundCookieExists) {
@@ -100,6 +102,8 @@ export default function Settings() {
 
       localStorage.setItem("settings", JSON.stringify(settingsData));
     }
+
+    uploadLocalStorage();
   };
 
   return (
