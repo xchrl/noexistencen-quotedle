@@ -51,10 +51,14 @@ export default function loadLocalStorage() {
     }
   }
 
-  const uuid = getUserUUID();
+  const uuid = localStorage.getItem("uuid") || getUserUUID();
   const uuidLocalStorage = localStorage.getItem("uuid");
   if (!uuidLocalStorage) {
     localStorage.setItem("uuid", uuid);
+  }
+
+  if (!document.cookie.split("; ").some((c) => c.startsWith("uuid="))) {
+    document.cookie = `uuid=${uuidLocalStorage}; path=/; max-age=31536000; SameSite=Lax`;
   }
 
   return {
