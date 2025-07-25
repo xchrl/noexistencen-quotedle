@@ -25,7 +25,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "NOexistenceNdle",
+  title: "NOexistenceN-quotedle",
   description:
     "A `finish the quote` quiz game based on `The NOexistenceN of you AND me`.",
 };

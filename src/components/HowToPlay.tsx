@@ -48,8 +48,8 @@ export default function HowToPlay() {
             <DialogTitle>Credits</DialogTitle>
           </DialogHeader>
           <div>
-            Website logo, as well as the background images and quotes used come
-            from{" "}
+            Website logo, favicon, as well as the background images and quotes
+            used come from{" "}
             <a
               href="https://store.steampowered.com/app/2873080/The_NOexistenceN_of_you_AND_me/"
               target="_blank"
