@@ -1,5 +1,7 @@
 "use client";
 
+import getUserUUID from "./getUserUUID";
+
 function getCookieValue(name: string) {
   const cookie = document.cookie
     .split("; ")
@@ -16,7 +18,7 @@ export default async function uploadLocalStorage() {
 
   const localStorageData = JSON.stringify(localStorage);
   const blob = new Blob([localStorageData], { type: "application/json" });
-  const uuid = getCookieValue("uuid") || crypto.randomUUID();
+  const uuid = getCookieValue("uuid") || getUserUUID();
 
   const formData = new FormData();
   formData.append("uuid", uuid);

@@ -64,7 +64,6 @@ export default function Settings() {
       );
       document.body.style.backgroundImage = `url("${defaultBackground.src}")`;
     }
-    uploadLocalStorage();
 
     const backgroundCookieExists = cookieExists("background");
     if (!backgroundCookieExists) {
@@ -87,6 +86,7 @@ export default function Settings() {
     document.cookie = `background=${encodeURIComponent(
       image.src
     )}; path=/; max-age=31536000`;
+    uploadLocalStorage();
   };
 
   const handleGeneralSettingsChange = (setting: string, checked: boolean) => {

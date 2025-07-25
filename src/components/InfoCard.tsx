@@ -1,7 +1,6 @@
 "use client";
 
 import loadLocalStorage from "@/lib/loadLocalStorage";
-import uploadLocalStorage from "@/lib/uploadLocalStorage";
 import { useEffect, useState } from "react";
 
 export default function InfoCard() {

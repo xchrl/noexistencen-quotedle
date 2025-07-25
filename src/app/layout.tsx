@@ -5,7 +5,6 @@ import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import { cookies } from "next/headers";
-import UserUUID from "@/lib/UserUUID";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -54,7 +53,6 @@ export default async function RootLayout({
         </main>
         <SpeedInsights />
         <Analytics />
-        <UserUUID />
       </body>
     </html>
   );
