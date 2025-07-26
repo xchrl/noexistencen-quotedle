@@ -15,10 +15,10 @@
     "id": 1,
     "quote": "\"Common sense\" is so reliable that it often makes people...",
     "answers": [
-      "...confuse intuition with absolute truth.",
+      "...forget about their \"self\".",
       "...forget the \"self\" as a perspective.",
       "...reject the need for any perspective at all.",
-      "...ignore the voices of others completely."
+      "...ignore the power of the \"self\"."
     ],
     "correctAnswer": 1,
     "from": "This quote is said by Lilith as she explains how common sense allows us to fill in the blanks where our experiences can't explain something in Chapter 1."
@@ -39,9 +39,9 @@
     "id": 3,
     "quote": "But to prove one's \"subjectivity\", it sometimes requires...",
     "answers": [
-      "...isolating oneself from any form of dialogue.",
-      "...denying the existence of all other perspectives.",
-      "...asserting one's truth without any regard for facts.",
+      "...denying the existence of other \"subjectivities\".",
+      "...forgetting that other people, too, have their own \"subjectivity\".",
+      "...disproving someone else's \"subjectivity\" first.",
       "...undermining someone else's \"subjectivity\" as a prerequisite."
     ],
     "correctAnswer": 3,
@@ -75,7 +75,7 @@
     "id": 6,
     "quote": "I feel like this world is full of malice. Whenever I look forward to something, ...",
     "answers": [
-      "...the world always turns me down",
+      "...the world always turns me down.",
       "...it seems like nothing ever goes my way.",
       "...nothing good ever actually happens.",
       "...I'm bound to be disappointed."
@@ -89,7 +89,7 @@
     "answers": [
       "...it's never enough.",
       "...every effort is met with silence or disdain.",
-      "...no one actually ever praises me.",
+      "...I always fail to satisfy anyone's expectations.",
       "...I can never meet anyone's expectations."
     ],
     "correctAnswer": 3,
@@ -102,7 +102,7 @@
       "...this kindness doesn't hide some cruel intention behind.",
       "...someone could be this good to me for no reason.",
       "...such warmth can exist without a catch.",
-      "...your heart is sincere beneath the mask."
+      "...your heart is sincere."
     ],
     "correctAnswer": 1,
     "from": "This quote is said by the player during the ferris wheel ride in Chapter 3."
@@ -147,8 +147,8 @@
     "id": 12,
     "quote": "\"Identity\" represents a limitation. In defining something, ...",
     "answers": [
-      "...we trap it within the edges of language.",
-      "...we sacrifice the ambiguity that gives it life.",
+      "...we trap it within the edges of the \"self\".",
+      "...we inevitably have to decline any other possibility.",
       "...we declare what it cannot be.",
       "...we inevitably negate other possibilities."
     ],
@@ -174,7 +174,7 @@
       "...the others!",
       "...a playground for imagination!",
       "...a spotlight for joy and chaos!",
-      "...the heart of every great tale!"
+      "...the unexpected~!"
     ],
     "correctAnswer": 0,
     "from": "This quote is from the introduction quote at the start of Chapter 3."
@@ -195,13 +195,13 @@
     "id": 16,
     "quote": "Yes, yes! It's the storyline RPG I worked through the night to complete! The...",
     "answers": [
-      "...ultimate tale of friendship, love, and mandrakes!",
+      "...ultimate tale of friendship, love, and battle!",
       "...most anticipated narrative-driven role-playing game of the year!",
       "...legendary epic every gamer dreams of!",
       "...best-selling, pixel-perfect fantasy experience!"
     ],
     "correctAnswer": 1,
-    "from": "This quote is said as Lilith explains what \"The Morphean Codex: The forest of Silver Shallots\" is to the player at the beginning of Chapter 2."
+    "from": "This quote is said as Lilith explains what \"The Morphean Codex: The Forest of Silver Shollots\" is to the player at the beginning of Chapter 2."
   },
   {
     "id": 17,
@@ -257,19 +257,19 @@
     "answers": [
       "...it can't identify as anything else.",
       "...we are also saying it is not something else.",
-      "...we narrow its meaning and potential.",
+      "...we narrow its meaning and potential to one, singular identity.",
       "...we exclude every other interpretation."
     ],
     "correctAnswer": 1,
-    "from": "This quote is said by LIlith during Chapter 5, as she recalls the philosophy behind Chapter 2."
+    "from": "This quote is said by Lilith during Chapter 5, as she recalls the philosophy behind Chapter 2."
   },
   {
     "id": 22,
     "quote": "Everyone wants their \"subjectivity\" to be...",
     "answers": [
       "...affirmed and uses others as fuel for their progression.",
-      "...recognized, even if only by a single voice.",
-      "...justified, regardless of truth or logic.",
+      "...recognized, so that they can use it to undermine others.",
+      "...justified, so that their actions seem explainable.",
       "...the one that is perfect and all-encompassing."
     ],
     "correctAnswer": 0,
@@ -280,9 +280,9 @@
     "quote": "People wear masks, put on costumes, and...",
     "answers": [
       "...step onto the stage, playing roles they wish to present.",
-      "...hope someone will applaud their illusion.",
+      "...go out on the stage, playing people that they aren't.",
       "...act out who they want others to believe they are.",
-      "...hide their true selves in layers of performance."
+      "...hide their true selves under the guise of a performance."
     ],
     "correctAnswer": 0,
     "from": "This quote is said by Lilith during Chapter 5, as she recalls the philosophy behind Chapter 3."
@@ -292,8 +292,8 @@
     "quote": "Individuals are always lonely, never able to present their fully transparent selves, because...",
     "answers": [
       "...they fear the truths they hid so deep come out.",
-      "...truth is too sharp to offer freely.",
-      "...they can't bear to be fully seen.",
+      "...the truth is too ugly to offer freely.",
+      "...they can't bear to be seen as who they truly are.",
       "...some parts are too despicable, insignificant, ugly, unbearable."
     ],
     "correctAnswer": 3,
@@ -306,7 +306,7 @@
       "...the world felt vivid and colorful.",
       "...sunlight filled every corner.",
       "...hope fluttered in like a bird.",
-      "...everything glowed in golden silence."
+      "...I was filled with boundless courage."
     ],
     "correctAnswer": 1,
     "from": "This quote is said by the player at the end of Chapter 5, particularly after getting the good ending and affirming that Lilith does indeed exist."
@@ -318,7 +318,7 @@
       "...come back safely.",
       "...get ingredients for the cake!",
       "...bring back a little cake.",
-      "...grab some tea on the way."
+      "...grab some flour on the way."
     ],
     "correctAnswer": 2,
     "from": "This quote is said by Lilith at the end of Chapter 5, after getting the good ending."
@@ -329,7 +329,7 @@
     "answers": [
       "...Then nothing else matters.",
       "...Then I'm able to face whatever comes my way.",
-      "...Then this moment can last forever.",
+      "...Then I feel like I can take on the unforgiving world.",
       "...Then I have the courage to face the cruel world."
     ],
     "correctAnswer": 3,
@@ -341,8 +341,8 @@
     "answers": [
       "-now broken to pieces.",
       "-its' pages scribbled out and unreadable.",
-      "-destroyed beyond recognition.",
-      "-shattered to pieces."
+      "-now destroyed beyond recognition.",
+      "-now shattered to pieces."
     ],
     "correctAnswer": 0,
     "from": "This quote is said by the player at the end of Chapter 5, after getting the bad ending. How could you?"
@@ -354,7 +354,7 @@
       "...unforgiving world that I had always feared.",
       "...truth I had always feared.",
       "...unknown, cruel, bloody, real tomorrow.",
-      "...echo of a life I couldn't escape."
+      "...cruel tomorrow, with no one by my side."
     ],
     "correctAnswer": 2,
     "from": "This quote is said by the player at the end of Chapter 5, after getting the bad ending. How could you?"
@@ -366,7 +366,7 @@
       "...they drift like quiet thoughts.",
       "...they're so soothing.",
       "...they carry away all worries.",
-      "...they glow like soft embers."
+      "...they take every burden off my shoulders."
     ],
     "correctAnswer": 1,
     "from": "This quote is said by the player when he tries to talk to the Stranger in the park during Chapter 3."
@@ -424,7 +424,7 @@
     "quote": "They say there's an afterlife, right? If dying could fulfill my wish, ...",
     "answers": [
       "...then what's left for me besides death?",
-      "...there’s no reason to keep waiting.",
+      "...there's no reason to keep waiting.",
       "...I might as well die now.",
       "...maybe I should die already."
     ],
@@ -445,12 +445,12 @@
   },
   {
     "id": 37,
-    "quote": "I think I should sleep now, maybe that'll help me. I'm worried...",
+    "quote": "I think I should sleep now, maybe that'll help me. I'm worried, ...",
     "answers": [
-      "...I won't be able to meet you.",
-      "..., I can't take it anymore, I'm in so much pain right now.",
-      "...that I'll never see you.",
-      "...rest won't be enough this time."
+      "...will I be able to meet you?",
+      "...I can't take it anymore, I'm in so much pain right now.",
+      "...will I ever see you?",
+      "...please, let rest take the pain away from me."
     ],
     "correctAnswer": 1,
     "from": "This quote comes from The Black Notebook, the contents of which are shown near the end of Chapter 4."
@@ -460,9 +460,9 @@
     "quote": "This story serves as a metaphor for \"relationships with others\" - everyone wants to...",
     "answers": [
       "...prove they are above others, everyone wants to use others as fuel for their own progress, even in intimate relationships.",
-      "...outshine the rest, no matter what it takes.",
-      "...control the narrative and define others' roles.",
-      "...stand tallest even if it means stepping on someone."
+      "...outshine the rest, prove that they are above the other, no matter what it takes.",
+      "...control the narrative, dominate others and define their roles.",
+      "...stand tallest and be at the very top, even if it means stepping on someone."
     ],
     "correctAnswer": 0,
     "from": "This quote is said by Lilith as she discusses the nature of relationships in Chapter 3."
