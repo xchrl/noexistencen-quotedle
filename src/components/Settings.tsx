@@ -24,7 +24,6 @@ import { CheckedState } from "@radix-ui/react-checkbox";
 import { ScrollArea } from "./ui/scroll-area";
 import defaultBackground from "@/assets/backgrounds/wonderland/1.webp";
 import uploadLocalStorage from "@/lib/uploadLocalStorage";
-import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 
 function cookieExists(name: string) {
   return document.cookie
