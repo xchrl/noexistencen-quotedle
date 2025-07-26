@@ -61,15 +61,15 @@ export default function HowToPlay() {
                   &apos;The NOexistenceN of you AND me&apos;
                 </a>{" "}
                 , belonging to &copy;{" "}
-                <span className="font-bold">Fontainebleau</span>. All rights
-                belong to their respective owners.
+                <span className="font-bold">Nino Games</span>. All rights belong
+                to their respective owners.
               </div>
               <div>
                 <p className="mb-2">Special thanks to: </p>
                 <ul className="list-disc pl-8 space-y-2">
                   <li>
-                    <span className="font-bold">Fontainebleau</span>, for
-                    creating such an amazing game
+                    <span className="font-bold">Nino Games</span>, for creating
+                    such an amazing game
                   </li>
                   <li>
                     <span className="font-bold">You</span>, for trying this game

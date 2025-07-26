@@ -38,7 +38,7 @@ export default function PrivacyPolicy({ isOnMobile }: { isOnMobile: boolean }) {
         <DialogHeader>
           <DialogTitle>Privacy Policy</DialogTitle>
           <DialogDescription>
-            noexistencendle | Last updated: 25-07-2025
+            noexistencendle | Last updated: 26-07-2025
           </DialogDescription>
         </DialogHeader>
         <ScrollArea className="h-100 sm:h-120 md:h-140">
