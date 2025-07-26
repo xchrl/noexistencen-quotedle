@@ -3,13 +3,13 @@
     "id": 0,
     "quote": "I had poured all the feelings I wanted to suppress into her, creating...",
     "answers": [
-      "...an entity that could \"love\" in every sense of the world.",
+      "...an entity that could \"love\" in every sense of the word.",
       "...a character that reflected \"pure love\".",
       "...a being with the purest concept of \"love\".",
       "...a being with unconditional \"love\"."
     ],
     "correctAnswer": 2,
-    "from": "This quote is said by the player as he explains what is Lilith, by the end of Chapter 4."
+    "from": "This quote is said by the player as he explains who Lilith is, by the end of Chapter 4."
   },
   {
     "id": 1,
@@ -52,12 +52,12 @@
     "quote": "If you want to leave this place, you will inevitably...",
     "answers": [
       "...be faced with other \"subjectivities\" fighting against yours.",
-      "...have to stand off against other \"subjectivities\"",
+      "...have to stand off against other \"subjectivities\".",
       "...face the cruel world of battling other \"subjectivities\".",
       "...be met with other \"subjectivities\" trying to undermine yours."
     ],
     "correctAnswer": 2,
-    "from": "This quote is said by Lilith as she discusses other subjectivities in Chapter 3."
+    "from": "This quote is said by Lilith as she discusses conflicting subjectivities in Chapter 3."
   },
   {
     "id": 5,
@@ -129,7 +129,7 @@
       "...as imposing and impressive as ever."
     ],
     "correctAnswer": 1,
-    "from": "This quote is said by the Mirror (player's room furniture) during the introductory Chapter, when pressing 'Wait, what are these chaotic noises?' dialogue option, as Lilith stares into you."
+    "from": "This quote is said by the Mirror (player's room furniture) during the introductory chapter, when pressing 'Wait, what are these chaotic noises?' dialogue option, as Lilith stares at you."
   },
   {
     "id": 11,
@@ -340,7 +340,7 @@
     "quote": "When I regained consciousness... The black notebook appeared in my vision-",
     "answers": [
       "-now broken to pieces.",
-      "-its' pages scribbled out and unreadable.",
+      "-its pages scribbled out and unreadable.",
       "-now destroyed beyond recognition.",
       "-now shattered to pieces."
     ],

@@ -6,7 +6,7 @@ export default function Countdown() {
   const [timeLeft, setTimeLeft] = useState<string>("");
 
   useEffect(() => {
-    function getTimeUntilUTCReset(): number {
+    function updateCountdown() {
       const now = new Date();
 
       const utcNow = new Date(
@@ -31,21 +31,22 @@ export default function Countdown() {
         )
       );
 
-      return Math.floor((nextMidnightUTC.getTime() - utcNow.getTime()) / 1000);
-    }
-
-    const interval = setInterval(() => {
-      const secondsLeft = getTimeUntilUTCReset();
+      const secondsLeft = Math.floor(
+        (nextMidnightUTC.getTime() - utcNow.getTime()) / 1000
+      );
 
       if (secondsLeft <= 0) {
-        window.location.reload(); // Refresh the page when 00:00 UTC hits
+        window.location.reload();
       } else {
         const hours = Math.floor(secondsLeft / 3600);
         const minutes = Math.floor((secondsLeft % 3600) / 60);
         const seconds = secondsLeft % 60;
         setTimeLeft(`${hours}h ${minutes}m ${seconds}s`);
       }
-    }, 1000);
+    }
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
 
     return () => clearInterval(interval);
   }, []);
