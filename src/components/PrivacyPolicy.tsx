@@ -25,7 +25,7 @@ export default function PrivacyPolicy({ isOnMobile }: { isOnMobile: boolean }) {
               <Button
                 type="button"
                 variant="ghost"
-                className="rounded-full aspect-square"
+                className="rounded-full aspect-square size-min"
               >
                 <CircleQuestionMarkIcon />
               </Button>
