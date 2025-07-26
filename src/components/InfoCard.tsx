@@ -35,19 +35,19 @@ export default function InfoCard() {
       <div className="grid grid-cols-2 md:flex md:flex-col gap-2 md:gap-4 text-lg text-center">
         <div className="flex flex-col md:flex-row items-center justify-between">
           Correct streak
-          <span className="px-2 py-1 rounded-sm bg-secondary">
+          <span className="px-2 py-1 rounded-sm bg-secondary border shadow-sm">
             {correctStreak}
           </span>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between">
           Personal best
-          <span className="px-2 py-1 rounded-sm bg-secondary">
+          <span className="px-2 py-1 rounded-sm bg-secondary border shadow-sm">
             {personalBest}
           </span>
         </div>
         <div className="flex flex-col col-span-2 md:flex-row items-center justify-between">
           Correct guesses
-          <span className="px-2 py-1 rounded-sm bg-secondary">
+          <span className="px-2 py-1 rounded-sm bg-secondary border shadow-sm">
             {correctGuesses} / {totalGuesses}
           </span>
         </div>

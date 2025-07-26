@@ -116,7 +116,7 @@ export default function QuoteCard({
       {/* Heading */}
       <h2 className="text-xl font-bold text-center">Quote {number} / 5</h2>
       {/* Quote area */}
-      <div className="bg-secondary/90 rounded-lg p-6 md:text-xl text-center font-medium border border-neutral-700">
+      <div className="bg-secondary/90 rounded-lg p-6 md:text-xl text-center font-medium border shadow-sm">
         {quote.quote}
       </div>
       <Separator orientation="horizontal" />
@@ -124,7 +124,7 @@ export default function QuoteCard({
       <div className="grid grid-cols-1 gap-2 md:gap-4">
         {quote.answers.map((answer, buttonIndex) => (
           <button
-            className={`transition duration-150 rounded-lg py-3 px-4 font-semibold flex justify-center gap-2 relative ${
+            className={`transition duration-150 rounded-lg py-3 px-4 font-semibold flex justify-center gap-2 relative border shadow-sm ${
               // Is the selected answer equal to this button?
               selectedAnswer === buttonIndex
                 ? // Is this button the correct answer?
