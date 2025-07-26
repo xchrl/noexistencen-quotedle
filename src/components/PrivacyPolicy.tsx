@@ -14,13 +14,13 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 export default function PrivacyPolicy({ isOnMobile }: { isOnMobile: boolean }) {
   return (
     <Dialog>
-      <DialogTrigger asChild>
-        {isOnMobile ? (
-          <Button type="button" variant="outline">
-            <CircleQuestionMarkIcon /> Privacy Policy
-          </Button>
-        ) : (
-          <Tooltip>
+      <Tooltip>
+        <DialogTrigger asChild>
+          {isOnMobile ? (
+            <Button type="button" variant="outline">
+              <CircleQuestionMarkIcon /> Privacy Policy
+            </Button>
+          ) : (
             <TooltipTrigger asChild>
               <Button
                 type="button"
@@ -30,10 +30,10 @@ export default function PrivacyPolicy({ isOnMobile }: { isOnMobile: boolean }) {
                 <CircleQuestionMarkIcon />
               </Button>
             </TooltipTrigger>
-            <TooltipContent>Privacy Policy</TooltipContent>
-          </Tooltip>
-        )}
-      </DialogTrigger>
+          )}
+        </DialogTrigger>
+        <TooltipContent>Privacy Policy</TooltipContent>
+      </Tooltip>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Privacy Policy</DialogTitle>

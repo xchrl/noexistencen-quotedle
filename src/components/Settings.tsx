@@ -123,13 +123,13 @@ export default function Settings({ isOnMobile }: { isOnMobile: boolean }) {
 
   return (
     <Dialog>
-      <DialogTrigger asChild>
-        {isOnMobile ? (
-          <Button type="button" variant="outline">
-            <SettingsIcon /> Settings
-          </Button>
-        ) : (
-          <Tooltip>
+      <Tooltip>
+        <DialogTrigger asChild>
+          {isOnMobile ? (
+            <Button type="button" variant="outline">
+              <SettingsIcon /> Settings
+            </Button>
+          ) : (
             <TooltipTrigger asChild>
               <Button
                 type="button"
@@ -139,10 +139,10 @@ export default function Settings({ isOnMobile }: { isOnMobile: boolean }) {
                 <SettingsIcon />
               </Button>
             </TooltipTrigger>
-            <TooltipContent>Settings</TooltipContent>
-          </Tooltip>
-        )}
-      </DialogTrigger>
+          )}
+        </DialogTrigger>
+        <TooltipContent>Settings</TooltipContent>
+      </Tooltip>
       <DialogContent className="w-8/10">
         <DialogHeader>
           <DialogTitle>Settings</DialogTitle>
