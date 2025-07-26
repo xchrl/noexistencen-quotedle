@@ -49,10 +49,11 @@ export default async function RootLayout({
           className="fixed top-0 left-0 w-screen h-[100lvh] -z-10 bg-cover bg-center"
           style={src ? { backgroundImage: `url(${src})` } : {}}
         ></div>
-        <header className="px-4 mt-6 md:px-0">
+        {/* TODO: make this work mobile/desktop */}
+        <header className="mt-0 md:mt-6 md:px-4 container mx-auto">
           <Navbar />
         </header>
-        <main className="flex flex-col md:flex-row gap-2 md:gap-8 container mx-auto px-4 md:px-0 my-4">
+        <main className="my-4 md:my-6 px-4 flex flex-col-reverse md:flex-row gap-2 md:gap-8 container mx-auto">
           {children}
         </main>
         <SpeedInsights />

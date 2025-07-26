@@ -50,7 +50,7 @@ export default function FinishedCard() {
     }
   }, []);
   return (
-    <div className="bg-background/80 border border-red-400 rounded-xl shadow-lg p-8 flex flex-col gap-4 md:gap-6">
+    <div className="bg-background/80 border border-red-400 rounded-xl shadow-lg p-4 md:p-6 flex flex-col gap-4 md:gap-6 pb-8">
       <h2 className="text-xl font-bold text-center">Finished!</h2>
       {todayStats && (
         <>
@@ -106,7 +106,7 @@ export default function FinishedCard() {
                       </CardContent>
                       <CardFooter>
                         <button
-                          className="bg-accent/30 border border-accent/60 p-3 rounded-lg hover:bg-accent/50 hover:border-accent/80 duration-150 hover:cursor-pointer w-full text-center md:text-left"
+                          className="bg-accent/30 border border-accent/60 p-3 rounded-lg hover:bg-accent/50 hover:border-accent/80 duration-150 hover:cursor-pointer w-full text-start"
                           onClick={() => handleToggle(index)}
                         >
                           <p className="flex justify-between gap-4">

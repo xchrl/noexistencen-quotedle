@@ -31,7 +31,7 @@ function cookieExists(name: string) {
     .some((cookie) => cookie.startsWith(name + "="));
 }
 
-export default function Settings() {
+export default function Settings({ isOnMobile }: { isOnMobile: boolean }) {
   const [settings, setSettings] = useState<{
     storage: boolean;
     background: string;
@@ -124,13 +124,24 @@ export default function Settings() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button
-          type="button"
-          variant="ghost"
-          className="rounded-full aspect-square"
-        >
-          <SettingsIcon />
-        </Button>
+        {isOnMobile ? (
+          <Button type="button" variant="outline">
+            <SettingsIcon /> Settings
+          </Button>
+        ) : (
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                type="button"
+                variant="ghost"
+                className="rounded-full aspect-square"
+              >
+                <SettingsIcon />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>Settings</TooltipContent>
+          </Tooltip>
+        )}
       </DialogTrigger>
       <DialogContent className="w-8/10">
         <DialogHeader>

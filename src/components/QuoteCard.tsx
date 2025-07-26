@@ -112,16 +112,16 @@ export default function QuoteCard({
   };
 
   return (
-    <div className="bg-background/80 border border-red-400 rounded-xl shadow-lg p-8 w-full flex flex-col gap-6">
+    <div className="bg-background/80 border border-red-400 rounded-xl shadow-lg p-4 md:p-6 w-full flex flex-col gap-4 md:gap-6">
       {/* Heading */}
       <h2 className="text-xl font-bold text-center">Quote {number} / 5</h2>
       {/* Quote area */}
-      <div className="bg-secondary/90 rounded-lg p-6 text-xl text-center font-medium border border-neutral-700">
+      <div className="bg-secondary/90 rounded-lg p-6 md:text-xl text-center font-medium border border-neutral-700">
         {quote.quote}
       </div>
       <Separator orientation="horizontal" />
       {/* Options grid */}
-      <div className="grid grid-cols-1 gap-4">
+      <div className="grid grid-cols-1 gap-2 md:gap-4">
         {quote.answers.map((answer, buttonIndex) => (
           <button
             className={`transition duration-150 rounded-lg py-3 px-4 font-semibold flex justify-center gap-2 relative ${

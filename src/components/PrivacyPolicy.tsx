@@ -9,18 +9,30 @@ import { CircleQuestionMarkIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { DialogHeader } from "./ui/dialog";
 import { ScrollArea } from "./ui/scroll-area";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
-export default function PrivacyPolicy() {
+export default function PrivacyPolicy({ isOnMobile }: { isOnMobile: boolean }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button
-          type="button"
-          variant="ghost"
-          className="rounded-full aspect-square"
-        >
-          <CircleQuestionMarkIcon />
-        </Button>
+        {isOnMobile ? (
+          <Button type="button" variant="outline">
+            <CircleQuestionMarkIcon /> Privacy Policy
+          </Button>
+        ) : (
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                type="button"
+                variant="ghost"
+                className="rounded-full aspect-square"
+              >
+                <CircleQuestionMarkIcon />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>Privacy Policy</TooltipContent>
+          </Tooltip>
+        )}
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
@@ -29,7 +41,7 @@ export default function PrivacyPolicy() {
             noexistencendle | Last updated: 25-07-2025
           </DialogDescription>
         </DialogHeader>
-        <ScrollArea className="h-100 sm:h-120 md:h-180">
+        <ScrollArea className="h-100 sm:h-120 md:h-140">
           <div className="wrapper flex flex-col gap-6">
             <div>
               <p>
