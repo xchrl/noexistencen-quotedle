@@ -35,10 +35,7 @@ export default function Home() {
     setCurrentQuote(quote);
   };
 
-  // TODO: kinda messy with how i apply shownNumber, clean up
-
   // Update upon page load
-
   useEffect(() => {
     const savedAnswered = loadDailyProgress();
     setAnswered(savedAnswered);
@@ -78,10 +75,10 @@ export default function Home() {
 
   return (
     <>
-      <div className="md:w-1/2">
+      <div className="flex-1">
         <InfoCard />
       </div>
-      <div className="md:w-1/2">
+      <div className="flex-1">
         {!finished && currentQuote ? (
           <QuoteCard
             quote={currentQuote}

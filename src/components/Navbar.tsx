@@ -5,7 +5,7 @@ import logo from "../assets/logo.webp";
 import HowToPlay from "./HowToPlay";
 import PrivacyPolicy from "./PrivacyPolicy";
 import Settings from "./Settings";
-import { MenuIcon } from "lucide-react";
+import { MenuIcon, X } from "lucide-react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -42,7 +42,7 @@ export default function Navbar() {
             priority
           />
           <button onClick={() => setIsOpen((prev) => !prev)}>
-            <MenuIcon />
+            {isOpen ? <X /> : <MenuIcon />}
           </button>
         </div>
         <AnimatePresence>

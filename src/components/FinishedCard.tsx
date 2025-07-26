@@ -13,6 +13,7 @@ import quotes from "@/data/quotes.json";
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 import { ArrowDownIcon } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import Countdown from "./Countdown";
 
 type QuoteData = {
   id: number;
@@ -61,6 +62,12 @@ export default function FinishedCard() {
                 {todayStats.correct_guesses}
               </span>{" "}
               quote endings correctly.
+            </p>
+            <p>
+              Next game in:{" "}
+              <span className="text-accent">
+                <Countdown />
+              </span>
             </p>
             <p>Let&apos;s see your performance:</p>
           </header>
