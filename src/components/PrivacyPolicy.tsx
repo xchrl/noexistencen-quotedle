@@ -10,6 +10,7 @@ import { Button } from "./ui/button";
 import { DialogHeader } from "./ui/dialog";
 import { ScrollArea } from "./ui/scroll-area";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
+import globals from "@/lib/globals";
 
 export default function PrivacyPolicy({ isOnMobile }: { isOnMobile: boolean }) {
   return (
@@ -38,7 +39,7 @@ export default function PrivacyPolicy({ isOnMobile }: { isOnMobile: boolean }) {
         <DialogHeader>
           <DialogTitle>Privacy Policy</DialogTitle>
           <DialogDescription>
-            noexistencendle | Last updated: 26-07-2025
+            {globals.PROJECT_NAME} | Last updated: 28-07-2025
           </DialogDescription>
         </DialogHeader>
         <ScrollArea className="h-100 sm:h-120 md:h-140">

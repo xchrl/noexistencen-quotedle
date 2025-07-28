@@ -1,12 +1,14 @@
 "use client";
 
-import InfoCard from "@/components/InfoCard";
-import QuoteCard from "../components/QuoteCard";
+import InfoCardDaily from "@/components/daily/InfoCardDaily";
+import QuoteCardDaily from "../components/daily/QuoteCardDaily";
 import { useEffect, useState } from "react";
 import quotes from "@/data/quotes.json";
 import type QuoteQuestion from "@/types/QuoteQuestion";
 import PageSkeleton from "@/components/PageSkeleton";
-import FinishedCard from "@/components/FinishedCard";
+import FinishedCardDaily from "@/components/daily/FinishedCardDaily";
+import { generateSet } from "@/lib/generateSet";
+import globals from "@/lib/globals";
 
 function loadDailyProgress() {
   const today = new Date().toISOString().split("T")[0];
@@ -40,15 +42,14 @@ export default function Home() {
     const savedAnswered = loadDailyProgress();
     setAnswered(savedAnswered);
 
-    async function getSet() {
-      const res = await fetch("/api/quoteset");
-      const ids = await res.json();
+    function getSet() {
+      const ids = generateSet();
       setQuoteIds(ids);
     }
 
     getSet();
 
-    if (savedAnswered === 5) {
+    if (savedAnswered >= globals.DAILY_QUOTES) {
       setFinished(true);
     } else {
       setShownNumber(savedAnswered > 0 ? savedAnswered + 1 : 1);
@@ -57,12 +58,13 @@ export default function Home() {
 
   useEffect(() => {
     if (quoteIds.length > 0 && !currentQuote && !finished) {
-      fetchQuote(quoteIds[answered]); // answered is loaded via loadDailyProgress()
+      fetchQuote(quoteIds[answered]);
+      console.log(currentQuote);
     }
   }, [quoteIds, currentQuote, finished, answered]);
 
-  const loadNextQuote = async () => {
-    if (answered >= 5) {
+  const loadNextQuote = () => {
+    if (answered >= globals.DAILY_QUOTES) {
       setFinished(true);
       return;
     }
@@ -75,19 +77,19 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex-1">
-        <InfoCard />
+      <div className="md:w-1/2">
+        <InfoCardDaily />
       </div>
       <div className="flex-1">
         {!finished && currentQuote ? (
-          <QuoteCard
+          <QuoteCardDaily
             quote={currentQuote}
             onNext={loadNextQuote}
             onAnswer={() => setAnswered((prev) => prev + 1)}
             number={shownNumber}
           />
         ) : (
-          <FinishedCard />
+          <FinishedCardDaily />
         )}
       </div>
     </>

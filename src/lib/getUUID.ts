@@ -1,5 +1,4 @@
 export default function getUUID() {
-  // Function to get cookie by name
   function getCookieValue(name: string): string | null {
     const cookies = document.cookie.split("; ");
     for (const cookie of cookies) {

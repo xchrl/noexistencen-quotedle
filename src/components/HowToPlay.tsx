@@ -10,8 +10,9 @@ import { InfoIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { DialogHeader } from "./ui/dialog";
 import { ScrollArea } from "./ui/scroll-area";
+import globals from "@/lib/globals";
 
-export default function HowToPlay() {
+export default function HowToPlay({ mode }: { mode: "daily" | "endless" }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -39,11 +40,26 @@ export default function HowToPlay() {
                 wrong. If the button turns green, your guess was correct; if it
                 turns red, your guess was incorrect.
               </li>
-              <li>
-                After guessing all 5 quotes, you will be able to see exactly how
-                you performed.
-              </li>
-              <li>Quotes change each day. Good luck!</li>
+              {mode === "daily" ? (
+                <>
+                  <li>
+                    After guessing all {globals.DAILY_QUOTES} quotes, you will
+                    be able to see exactly how you performed.
+                  </li>
+                  <li>Quotes change each day. Good luck!</li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    If you guess incorrectly, the game stops, and you can review
+                    how you performed.
+                  </li>
+                  <li>
+                    To try again, simply press the &quot;Try again&quot; button.
+                    Good luck!
+                  </li>
+                </>
+              )}
             </ol>
             <Separator orientation="horizontal" />
             <footer className="flex flex-col gap-2">

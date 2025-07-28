@@ -7,20 +7,24 @@ import quotes from "@/data/quotes.json";
 import type QuoteQuestion from "@/types/QuoteQuestion";
 import { AnimatePresence, motion } from "framer-motion";
 import uploadLocalStorage from "@/lib/uploadLocalStorage";
-import { Badge } from "./ui/badge";
-import { Separator } from "./ui/separator";
+import { Badge } from "../ui/badge";
+import { Separator } from "../ui/separator";
+
+import { QuoteCard } from "@/components/ui/QuoteCard";
 
 type QuoteCardProps = {
   quote: QuoteQuestion;
   onNext: () => void;
   onAnswer: () => void;
+  onIncorrect: () => void;
   number: number;
 };
 
-export default function QuoteCard({
+export default function QuoteCardEndless({
   quote,
   onNext,
   onAnswer,
+  onIncorrect,
   number,
 }: QuoteCardProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
@@ -39,48 +43,42 @@ export default function QuoteCard({
 
     // Upon answer, save data to localStorage
     try {
-      const { dailyModeStats } = loadLocalStorage();
-      if (dailyModeStats) {
-        const dailyModeData = JSON.parse(dailyModeStats);
-        const streak = dailyModeData.streak;
-        const personalBest = dailyModeData.personal_best;
+      const { endlessModeStats, endless } = loadLocalStorage();
+      if (endlessModeStats) {
+        const endlessModeData = JSON.parse(endlessModeStats);
+        const streak = endlessModeData.streak;
+        const personalBest = endlessModeData.personal_best;
 
         localStorage.setItem(
-          "daily_mode_stats",
+          "endless_mode_stats",
           JSON.stringify({
-            total_guesses: parseInt(dailyModeData.total_guesses + 1),
+            total_guesses: parseInt(endlessModeData.total_guesses + 1),
             correct_guesses: correct
-              ? dailyModeData.correct_guesses + 1
-              : dailyModeData.correct_guesses,
-            streak: correct ? dailyModeData.streak + 1 : 0,
+              ? endlessModeData.correct_guesses + 1
+              : endlessModeData.correct_guesses,
+            streak: correct ? endlessModeData.streak + 1 : 0,
             personal_best: correct
               ? streak >= personalBest
-                ? dailyModeData.personal_best + 1
-                : dailyModeData.personal_best
-              : dailyModeData.personal_best,
+                ? endlessModeData.personal_best + 1
+                : endlessModeData.personal_best
+              : endlessModeData.personal_best,
           })
         );
       }
 
-      const today = localStorage.getItem("today");
-      if (today == "null" || today == null) {
-        localStorage.setItem("today", "{}");
-      } else {
-        const { guesses, correct_guesses, date } = JSON.parse(today);
-        const todayDate = new Date().toISOString().split("T")[0];
-        const previousQuoteData = JSON.parse(today).quoteData;
+      if (endless) {
+        const { correct_guesses, used_quotes: previousUsedQuotes } =
+          JSON.parse(endless);
+        const previousQuoteData = JSON.parse(endless).quote_data;
 
         localStorage.setItem(
-          "today",
+          "endless",
           JSON.stringify({
-            guesses: date == todayDate ? (parseInt(guesses) + 1).toString() : 0,
-            correct_guesses: (date == todayDate
-              ? correct
-                ? (parseInt(correct_guesses) + 1).toString()
-                : parseInt(correct_guesses)
-              : 0
+            correct_guesses: (correct
+              ? (parseInt(correct_guesses) + 1).toString()
+              : parseInt(correct_guesses)
             ).toString(),
-            quoteData: [
+            quote_data: [
               ...previousQuoteData,
               {
                 id: quote.id,
@@ -88,7 +86,8 @@ export default function QuoteCard({
                 correct: correct,
               },
             ],
-            date: date,
+            used_quotes: [...previousUsedQuotes, quote.id],
+            finished: !correct,
           })
         );
       }
@@ -108,20 +107,19 @@ export default function QuoteCard({
     setSelectedAnswer(null);
     setIsCorrect(null);
     setQuoteFromRevealed(false);
+    if (!isCorrect) {
+      onIncorrect();
+      return;
+    }
     onNext();
   };
 
   return (
-    <div className="bg-background/80 border border-red-400 rounded-xl shadow-lg p-4 md:p-6 w-full flex flex-col gap-4 md:gap-6">
-      {/* Heading */}
-      <h2 className="text-xl font-bold text-center">Quote {number} / 5</h2>
-      {/* Quote area */}
-      <div className="bg-secondary/90 rounded-lg p-6 md:text-xl text-center font-medium border shadow-sm">
-        {quote.quote}
-      </div>
+    <QuoteCard>
+      <QuoteCard.Heading>Quote {number}</QuoteCard.Heading>
+      <QuoteCard.QuoteArea>{quote.quote}</QuoteCard.QuoteArea>
       <Separator orientation="horizontal" />
-      {/* Options grid */}
-      <div className="grid grid-cols-1 gap-2 md:gap-4">
+      <QuoteCard.Answers>
         {quote.answers.map((answer, buttonIndex) => (
           <button
             className={`transition duration-150 rounded-lg py-3 px-4 font-semibold flex justify-center gap-2 relative border shadow-sm ${
@@ -167,7 +165,7 @@ export default function QuoteCard({
             )}
           </button>
         ))}
-      </div>
+      </QuoteCard.Answers>
       <button
         className={`bg-secondary p-4 rounded-lg flex justify-center gap-4 transition duration-150 hover:scale-110 hover:cursor-pointer ${
           selectedAnswer === null ? "hidden" : ""
@@ -206,6 +204,6 @@ export default function QuoteCard({
           )}
         </AnimatePresence>
       </button>
-    </div>
+    </QuoteCard>
   );
 }
