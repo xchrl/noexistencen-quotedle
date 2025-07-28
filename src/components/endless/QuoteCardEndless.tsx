@@ -67,9 +67,8 @@ export default function QuoteCardEndless({
       }
 
       if (endless) {
-        const { correct_guesses, used_quotes: previousUsedQuotes } =
-          JSON.parse(endless);
-        const previousQuoteData = JSON.parse(endless).quote_data;
+        const { correct_guesses, used_quotes: previousUsedQuotes } = endless;
+        const previousQuoteData = endless.quote_data;
 
         localStorage.setItem(
           "endless",
