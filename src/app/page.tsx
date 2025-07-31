@@ -59,7 +59,6 @@ export default function Home() {
   useEffect(() => {
     if (quoteIds.length > 0 && !currentQuote && !finished) {
       fetchQuote(quoteIds[answered]);
-      console.log(currentQuote);
     }
   }, [quoteIds, currentQuote, finished, answered]);
 
