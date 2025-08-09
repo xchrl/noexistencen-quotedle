@@ -39,7 +39,7 @@ export default function PrivacyPolicy({ isOnMobile }: { isOnMobile: boolean }) {
         <DialogHeader>
           <DialogTitle>Privacy Policy</DialogTitle>
           <DialogDescription>
-            {globals.PROJECT_NAME} | Last updated: 28-07-2025
+            {globals.PROJECT_NAME} | Last updated: 10-09-2025
           </DialogDescription>
         </DialogHeader>
         <ScrollArea className="h-100 sm:h-120 md:h-140">
