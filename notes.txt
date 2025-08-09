@@ -2,3 +2,5 @@ done: make components like InfoCard, QuoteCard modular (compound)
 TODO: refactor endless mode code for readability
 done: set some hard-coded variables as globals, declared in a file like GLOBALS.ts
 done(?): move logic behind getting set for today to separate file and not as api?
+
+TODO: QuoteCard.Answers button in its own component file, as well as other buttons in the same card components

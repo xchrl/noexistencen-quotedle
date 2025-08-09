@@ -591,12 +591,192 @@
     "id": 49,
     "quote": "\"As music plays, the Demon Lord begins...",
     "answers": [
-      "...tapping their hands and feet to the rhythm.",
-      "...laughing in perfect tempo.",
-      "...bouncing along in sync.",
-      "...grooving with surprisingly good timing."
+      "...tapping their hands and feet to the rhythm.\"",
+      "...bouncing perfectly to the rhythm.\"",
+      "...bouncing along in sync.\"",
+      "...grooving with surprisingly good timing.\""
     ],
     "correctAnswer": 0,
     "from": "This quote is shown after the player takes out the record player during the fight with the Demon Lord in Chapter 2."
+  },
+  {
+    "id": 50,
+    "quote": "Yes, the premise that enables these concepts is...",
+    "answers": [
+      "...the \"self\" as the observer's perspective.",
+      "...the individuality of the observer.",
+      "...the \"self\" that exists within each observer.",
+      "...the individual \"self\" that resides in each one of us."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith during Chapter 1, as she explains that the \"self\" allows us to understand the existence of another."
+  },
+  {
+    "id": 51,
+    "quote": "So here's the story: The mandrake plant is...",
+    "answers": [
+      "...called Sakurako - a white-haired, red-eyed girl.",
+      "...a white-haired, red-eyed girl with twin tails named Sakurako.",
+      "...similar in appearance to Lilith - white-haired, with red eyes.",
+      "...a red-haired, white-eyed girl with twin tails named Sakurako."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by Sartre during Chapter 2, as she explains the story of her novel: \"Summer Sakura Girl of the Snow Country ~ Vows Blooming Under the Hues of Pure Longing~\"."
+  },
+  {
+    "id": 52,
+    "quote": "Coming here in a suit? Are you someone who...",
+    "answers": [
+      "...lost their job but pretends to still have one?",
+      "...just got laid off from their workplace?",
+      "...pretends to be a businessman, even though they have no clue about business?",
+      "...is very successful at what they do?"
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by the player during Chapter 3, as he initiates a conversation with the Stranger at the park."
+  },
+  {
+    "id": 53,
+    "quote": "But once the night ended, they had to change back into those unbearably boring uniforms and...",
+    "answers": [
+      "...behave like they never found out their truth, continuing to live their boring lives.",
+      "...act like they don't have a clue about the truth behind the fourth candy.",
+      "...pretend nothing happened, continuing their dull and tedious daily lives.",
+      "...pretend nothing happened, now finding their ordinary lives unbearable."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by the Green Pill in Chapter 4, as they share the story of two kids challenging the rule of 'only three candies a day'."
+  },
+  {
+    "id": 54,
+    "quote": "Even though I've always run from love in fear, denied it, I...",
+    "answers": [
+      "...crave it more than anyone else.",
+      "...yearn for it so much it hurts.",
+      "...feel pain every time I think about it.",
+      "...actually wish it would come to me."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by the player during Chapter 4, as he begins to doubt Lilith's existence."
+  },
+  {
+    "id": 55,
+    "quote": "Uh... A... friend of mine secretly told me- \"Actually, Foucault's coolness is all an act. She spends hours in front of the mirror...",
+    "answers": [
+      "...perfecting her deadpan expression to appear as emotionless.\"",
+      "...practicing her expressions to fake being a emotionless girl.\"",
+      "...working on her expressions, so that those around her think she's emotionless.\"",
+      "...training to appear as emotionless as possible.\""
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by Sartre during Chapter 3, as the player comes up to speak with her after the concert."
+  },
+  {
+    "id": 56,
+    "quote": "A friend told me that when Sartre quotes famous philosophers while explaing her ideas, she's not really trying to teach me anything...",
+    "answers": [
+      "...She just wants me to believe she's someone intelligent, while in reality, she doesn't know a thing about philosophy.",
+      "...She just does it to appear smarter than I am, just to feel superior to me.",
+      "...She just wants me to think she's brilliant and builds her sense of superiority from my approval.",
+      "...In reality, she's just quoting them to appear as smarter than she actually is."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by Fouco during Chapter 3, as the player comes up to speak with her after the concert."
+  },
+  {
+    "id": 57,
+    "quote": "But let me clarify - I wasn't saying anything bad. I was simply...",
+    "answers": [
+      "...working in their best interest.",
+      "...telling them how it is.",
+      "...telling them the harsh truth.",
+      "...reavealing \"the truth\" to them."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith during Chapter 3, as she explains why she badmouthed Sartre and Fouco to the other behind their backs."
+  },
+  {
+    "id": 58,
+    "quote": "\"Without knowing where it came from. the Morphean Paradox uses the hamburger patty. In other words, the Morphean Paradox...",
+    "answers": [
+      "...eats the hamburger patty right in front of the Demon Lord.\"",
+      "...throws the hamburger patty right into the Demon Lord's face.\"",
+      "...tempts the Demon Lord with their hamburger patty.\"",
+      "...passes the hamburger patty to the Demon Lord.\""
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said during the fight with the Demon Lord (Fouco) in Chapter 2, as the player uses the hamburger patty."
+  },
+  {
+    "id": 59,
+    "quote": "Lilith will create an even better game for you next time, so you...",
+    "answers": [
+      "...'d better look forward to it.",
+      "...can experience true happiness.",
+      "...can feel right at home.",
+      "...don't have to worry about a thing."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by Lilith during Chapter 2, after completing \"The Morphean Paradox: The Forest of Silver Shallots\"."
+  },
+  {
+    "id": 60,
+    "quote": "Every day I spend with you is fulfilling and meaningful. Lilith, as long as you're with me, I think I...",
+    "answers": [
+      "...can fall in love with the world again.",
+      "...can find the courage to face this world.",
+      "...will be able to love the world again.",
+      "...will be the happiest person alive."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by the player during Chapter 2, after completing \"The Morphean Paradox: The Forest of Silver Shallots\"."
+  },
+  {
+    "id": 61,
+    "quote": "Sometimes, seeking inspration beyond this world...",
+    "answers": [
+      "...can make the world a more beautiful place!",
+      "...can develop your imagination even more!",
+      "...can enrich you in beautiful memories!",
+      "...can make the world more comfortable!"
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith at the start of Chapter 3, as she encourages the player to step into the outside world."
+  },
+  {
+    "id": 62,
+    "quote": "\"The girl gently places her hand over yours, and together, you...",
+    "answers": [
+      "...hold the doorknob.\"",
+      "...share a moment of closeness and warmth.",
+      "...look into each other's eyes.",
+      "...lose yourselves in each other."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote comes from the beginning of Chapter 3, as you and Lilith prepare to head outside the room."
+  },
+  {
+    "id": 63,
+    "quote": "The atmosphere feels a bit awkward... Maybe...",
+    "answers": [
+      "...lighten up the mood with a joke?",
+      "...try talking about the park or the weather?",
+      "...try to start a conversation with him?",
+      "...let's move somewhere else?"
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by Lilith during Chapter 3, as the player sits down next to the Stranger in the park."
+  },
+  {
+    "id": 64,
+    "quote": "Ah, I arrived five minutes early, but you...",
+    "answers": [
+      "...managed to come right at the same time as me!",
+      "...were already here anyway!",
+      "...got here even earlier than me!",
+      "...didn't show up until 20 minutes too late..."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by Lilith during Chapter 3, as she arrives before the theme park with the player."
   }
 ]

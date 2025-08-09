@@ -79,7 +79,7 @@ export default function Home() {
       <div className="md:w-1/2">
         <InfoCardDaily />
       </div>
-      <div className="flex-1">
+      <div className="md:w-1/2">
         {!finished && currentQuote ? (
           <QuoteCardDaily
             quote={currentQuote}
