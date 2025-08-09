@@ -3,6 +3,7 @@
 import uploadLocalStorage from "@/lib/uploadLocalStorage";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
 const COOLDOWN_TIME = 4 * 60 * 60 * 1000; // 4 hours in ms
 
@@ -40,14 +41,25 @@ export default function SaveDataButton() {
 
   const handleClick = () => {
     uploadLocalStorage();
-    localStorage.setItem("lastClickTime", Date.now().toString());
+    localStorage.setItem("last_save_time", Date.now().toString());
     setDisabled(true);
     setRemaining(COOLDOWN_TIME);
   };
 
   return (
-    <Button onClick={handleClick} disabled={disabled}>
-      Save your data to an external server
-    </Button>
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Button onClick={handleClick} disabled={disabled}>
+          Save your data to an external server
+        </Button>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p>
+          This will allow you to keep your data in the case of future updates,
+          for example, user/password authentication. There is a cooldown of 4
+          hours between saves.
+        </p>
+      </TooltipContent>
+    </Tooltip>
   );
 }

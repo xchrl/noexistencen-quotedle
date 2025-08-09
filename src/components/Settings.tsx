@@ -141,16 +141,7 @@ export default function Settings({ isOnMobile }: { isOnMobile: boolean }) {
             </div>
           </section>
           <section className="space-y-2 flex justify-end">
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <SaveDataButton />
-              </TooltipTrigger>
-              <TooltipContent>
-                This will allow you to keep your data in the case of future
-                updates, for example, user/password authentication. There is a
-                cooldown of 4 hours between saves.
-              </TooltipContent>
-            </Tooltip>
+            <SaveDataButton />
           </section>
         </div>
       </DialogContent>
