@@ -1,6 +1,6 @@
 {
   "name": "noexistencen-quotedle",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -29,10 +29,12 @@
     "lucide": "^0.525.0",
     "lucide-react": "^0.525.0",
     "next": "15.4.3",
+    "next-themes": "^0.4.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "seedrandom": "^3.0.5",
     "sharp": "^0.34.3",
+    "sonner": "^2.0.7",
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {

@@ -1,5 +1,6 @@
 "use client";
 
+import { toast } from "sonner";
 import getUUID from "./getUUID";
 
 function getCookieValue(name: string) {
@@ -10,12 +11,6 @@ function getCookieValue(name: string) {
 }
 
 export default async function uploadLocalStorage() {
-  const settings = localStorage.getItem("settings");
-  if (settings) {
-    const allowSaving = JSON.parse(settings).storage;
-    if (!allowSaving) return;
-  }
-
   const localStorageData = JSON.stringify(localStorage);
   const blob = new Blob([localStorageData], { type: "application/json" });
   const uuid =
@@ -29,8 +24,15 @@ export default async function uploadLocalStorage() {
     "localStorage changed and user allows sending data, sending localStorage data..."
   );
 
-  await fetch("/api/uploadtoblob", {
-    method: "POST",
-    body: formData,
-  });
+  try {
+    await fetch("/api/uploadtoblob", {
+      method: "POST",
+      body: formData,
+    }).then(() => toast.success("Data uploaded succesfully!"));
+  } catch (error) {
+    console.error(error);
+    toast.error("There was an error when uploading your data.", {
+      description: "Check the browser console for more details",
+    });
+  }
 }

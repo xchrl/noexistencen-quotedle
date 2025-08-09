@@ -5,6 +5,7 @@ import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import { cookies } from "next/headers";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +45,7 @@ export default async function RootLayout({
       <body
         className={`${plusJakartaSans.className} ${geistSans.className} ${geistMono.className} antialiased`}
       >
+        <Toaster position="top-right" richColors />
         <div
           id="background"
           className="fixed top-0 left-0 w-screen h-[100lvh] -z-10 bg-cover bg-center"
