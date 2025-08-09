@@ -22,7 +22,7 @@ InfoCard.Content = function Content({ children }: Children) {
 
 InfoCard.ContentSection = function ContentSection({ children }: Children) {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between">
+    <div className="flex flex-col md:flex-row items-center justify-between last:col-span-2 gap-2">
       {children}
     </div>
   );
