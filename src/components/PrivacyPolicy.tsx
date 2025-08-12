@@ -39,7 +39,7 @@ export default function PrivacyPolicy({ isOnMobile }: { isOnMobile: boolean }) {
         <DialogHeader>
           <DialogTitle>Privacy Policy</DialogTitle>
           <DialogDescription>
-            {globals.PROJECT_NAME} | Last updated: 10-09-2025
+            {globals.PROJECT_NAME} | Last updated: 12-08-2025
           </DialogDescription>
         </DialogHeader>
         <ScrollArea className="h-100 sm:h-120 md:h-140">
@@ -75,6 +75,17 @@ export default function PrivacyPolicy({ isOnMobile }: { isOnMobile: boolean }) {
                         <li>Correct guesses</li>
                       </ul>
                     </li>
+                    <li>
+                      Game statistics for the Endless Mode:
+                      <ul className="list-disc pl-8">
+                        <li>Current streak</li>
+                        <li>Personal best</li>
+                        <li>
+                          Information about the quotes you&apos;ve answered
+                          already
+                        </li>
+                      </ul>
+                    </li>
                     <li>Player’s previous guesses for today</li>
                     <li>Today&apos;s date</li>
                     <li>
@@ -108,16 +119,16 @@ export default function PrivacyPolicy({ isOnMobile }: { isOnMobile: boolean }) {
               </p>
               <ul className="list-disc pl-8 space-y-2">
                 <li>
-                  <strong>Opt-in/Opt-out Control:</strong>
+                  <strong>&apos;Send data&apos; button</strong>
                   <br />
                   <p className="text-muted-foreground">
-                    In the <strong>Settings</strong>, you can check or uncheck
-                    the option to allow your local data to be synced.
+                    In the <strong>Settings</strong>, you can press a button to
+                    optionally sync your data to an external server.
                   </p>
                 </li>
                 <li>
-                  If <strong>disabled</strong>, your localStorage data remains{" "}
-                  <strong>completely local</strong> and is{" "}
+                  If <strong>not pressed</strong>, your localStorage data
+                  remains <strong>completely local</strong> and is{" "}
                   <strong>never sent or stored</strong> elsewhere.
                 </li>
               </ul>
