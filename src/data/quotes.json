@@ -201,7 +201,7 @@
       "...best-selling, pixel-perfect fantasy experience!"
     ],
     "correctAnswer": 1,
-    "from": "This quote is said as Lilith explains what \"The Morphean Codex: The Forest of Silver Shollots\" is to the player at the beginning of Chapter 2."
+    "from": "This quote is said as Lilith explains what \"The Morphean Codex: The Forest of Silver Shallots\" is to the player at the beginning of Chapter 2."
   },
   {
     "id": 17,
@@ -697,7 +697,7 @@
   },
   {
     "id": 58,
-    "quote": "\"Without knowing where it came from. the Morphean Paradox uses the hamburger patty. In other words, the Morphean Paradox...",
+    "quote": "\"Without knowing where it came from, the Morphean Paradox uses the hamburger patty. In other words, the Morphean Paradox...",
     "answers": [
       "...eats the hamburger patty right in front of the Demon Lord.\"",
       "...throws the hamburger patty right into the Demon Lord's face.\"",
@@ -748,9 +748,9 @@
     "quote": "\"The girl gently places her hand over yours, and together, you...",
     "answers": [
       "...hold the doorknob.\"",
-      "...share a moment of closeness and warmth.",
-      "...look into each other's eyes.",
-      "...lose yourselves in each other."
+      "...share a moment of closeness and warmth.\"",
+      "...look into each other's eyes.\"",
+      "...lose yourselves in each other.\""
     ],
     "correctAnswer": 0,
     "from": "This quote comes from the beginning of Chapter 3, as you and Lilith prepare to head outside the room."
@@ -778,5 +778,185 @@
     ],
     "correctAnswer": 2,
     "from": "This quote is said by Lilith during Chapter 3, as she arrives before the theme park with the player."
+  },
+  {
+    "id": 65,
+    "quote": "Even though it's not edible, we can still share the ritual of cutting the cake - this is proof...",
+    "answers": [
+      "...we've changed the world through our actions.",
+      "...that you can enjoy anything as long as you do it with another person.",
+      "...enough we've shared a precious memory.",
+      "...we've created meaning from nothingness."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is shared by Lilith after baking the strawberry cake with the player in Chapter 1."
+  },
+  {
+    "id": 66,
+    "quote": "This is as far as I can take you... But the Lilith in the next timeline will...",
+    "answers": [
+      "...surely protect you, just like I have.",
+      "...love you and protect you, just like me.",
+      "...stay by your side, just like I have.",
+      "...protect you from danger, just like me."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith during Chapter 1, when the player fails the oven minigame."
+  },
+  {
+    "id": 67,
+    "quote": "In any case, the task of convincing the oven falls to you. You must make it believe that it's just an oven. Or rather...",
+    "answers": [
+      "...you must convince it that it isn't anything else but an oven.",
+      "...you must make yourself, as the observer, believe it's just an oven.",
+      "...you need to find the right thought and capture it before it slips away.",
+      "...you must convince your own mind that it's just an oven."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by Lilith right before the oven minigame in Chapter 1."
+  },
+  {
+    "id": 68,
+    "quote": "Well, I haven't described the taste yet. Honestly, I'm more interested in...",
+    "answers": [
+      "...seeing your reaction to my work.",
+      "...how the \"sparkling effect\" ended up.",
+      "...the cream's texture and the strawberries' color.",
+      "...the strawberries' interior and the cream's roughness."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by Lilith after the player takes a bite out of the strawberry cake in Chapter 1."
+  },
+  {
+    "id": 69,
+    "quote": "As you can see, this is the royal palace. You'll begin your journey here as the Morphean Paradox, ...",
+    "answers": [
+      "...meeting various NPCs in the vast Forest of Silver Shallots, and ending your journey on defeating the Demon Lord and rescuing the princess.",
+      "...taking on a quest from the king to defeat the Demon Lord in her castle, and rescue the princess.",
+      "...exploring the wonderful world, starting from the Forest of Silver Shallots, all the way to the castle of the Demon Lord.",
+      "...traveling through the vast Forest of Silver Shallots, defeating the Demon Lord, and rescuing the princess."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith at the beginning of the player's playthrough of \"The Morphean Codex: The Forest of Silver Shallots\" in Chapter 2."
+  },
+  {
+    "id": 70,
+    "quote": "Usually, the princess should be waiting at the end of the journey - ...",
+    "answers": [
+      "...in the Demon Lord's castle on the far side of the Forest of Silver Shallots.",
+      "...right after you defeat the final boss, which is the Demon Lord.",
+      "...after you had met every NPC and completed every quest available.",
+      "...in the Demon Lord's castle, thus completing your adventure."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith after the player receives the quest to rescue the princess from the king in Chapter 2."
+  },
+  {
+    "id": 71,
+    "quote": "I've been pondering for ages, but I just can't figure it out. The dilemma is: ...",
+    "answers": [
+      "...Should I accurately describe every property of the mandrake plant as scientifically as possible, or fill in the blanks using my imagination?",
+      "...Should I let this mandrake plant discover that it's the true culprit of a tragic incident five years ago and then commit suicide out of guilt?",
+      "...Does the mandrake plant truly, objectively, exist, or does it merely reside within the consciousness of the person observing it?",
+      "...Should this mandrake plant be portrayed as an antihero, fighting the right cause through wrong actions, or as a villain, crushing what's good in this world?"
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by the Scholar (Sartre), as the player encounters her with Lilith in Chapter 2."
+  },
+  {
+    "id": 72,
+    "quote": "Just like after playing a hundred dating sims where you meet, date, and embrace a seemingly infinite combination of hairstyles, hair colors, eye colors, personalities, and identities of cute girls... Eventually, you'd want to...",
+    "answers": [
+      "...change things up and romance an inanimate object like a mandrake plant, wouldn't you?!",
+      "...try something different and go after a plant, wouldn't you?!",
+      "...try a dating sim where you romance a mandrake plant, wouldn't you?!",
+      "...play a dating sim where your main goal isn't to win over a girl's heart, wouldn't you?!"
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by the Scholar (Sartre), as she explains why her academic paper sounds like a novel during Chapter 2."
+  },
+  {
+    "id": 73,
+    "quote": "Identity means moving away from perfection - ...",
+    "answers": [
+      "...that is what makes us human.",
+      "...how terrible.",
+      "...what a tragic thought.",
+      "...what a sad thing that is."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by the Scholar (Sartre) after realising that she is only an NPC in Chapter 2."
+  },
+  {
+    "id": 74,
+    "quote": "...Oh no, this looks bad. Right now, the Demon Lord is unbeatable because...",
+    "answers": [
+      "...she has no weaknesses.",
+      "...she has way too much HP.",
+      "...you haven't received any weapon to attack her with.",
+      "...she is designed to be immortal."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith as she and the player encounter the Demon Lord (Fouco) in Chapter 2."
+  },
+  {
+    "id": 75,
+    "quote": "\"The Demon Lord stares intently at the half-eaten hamburger patty in the Morphean Paradox's hand, ...",
+    "answers": [
+      "...hoping that they will give it to them.\"",
+      "...pretending to be unaffected.\"",
+      "...reducing their defense to 0.\"",
+      "...reducing their attack power to 0.\""
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said during the fight with the Demon Lord (Fouco) in Chapter 2, as the player uses the hamburger patty."
+  },
+  {
+    "id": 76,
+    "quote": "No, no, no! There's no romance to unlock here! This game...",
+    "answers": [
+      "...has no romance system implemented!",
+      "...doesn't allow any love interest other than Lilith!",
+      "...only allows Lilith as a love interest!",
+      "...has only one love interest, and that is the princess!"
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said during the fight with the Demon Lord (Fouco) in Chapter 2, as the player uses the Morphean Codex and takes a bite out of it."
+  },
+  {
+    "id": 77,
+    "quote": "Oh, great The Morphean Paradox, you've saved both the princess and the kingdom. I express my deepest gratitude to you. ...",
+    "answers": [
+      "...You will be properly rewarded for your contributions.",
+      "...You will receive appropriate funding and rank to happily live with Princess Lilith.",
+      "...I shall pass the throne to you. Take proper care of Princess Lilith.",
+      "...I'll pass my throne to you. Live happily ever after with Princess Lilith."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said after the player defeats the Demon Lord (Fouco) and comes back with Lilith to the king in Chapter 2."
+  },
+  {
+    "id": 78,
+    "quote": "Lilith nestles by your side, and the two of you...",
+    "answers": [
+      "...share a moment of bliss.",
+      "...fall asleep soundly.",
+      "...share a sigh of content in each other's arms.",
+      "...cuddle in each other's arms."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is from the ending of Chapter 2."
+  },
+  {
+    "id": 79,
+    "quote": "Hehe~ I was just thinking... Didn't you complete the demo of \"The Morphean Codex: The Forest of Silver Shallots\" before? Now, ...",
+    "answers": [
+      "...it's time for you to pay up!",
+      "...the full version is available!",
+      "...a payment is in order, wouldn't you agree?",
+      "...I still haven't received your payment!"
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by Lilith at the beginning of Chapter 3."
   }
 ]
