@@ -2,32 +2,41 @@ import quotes from "@/data/quotes.json";
 import seedrandom from "seedrandom";
 import globals from "./globals";
 
-export function generateSet(): number[] {
-  const today = new Date().toISOString().split("T")[0];
-  const rng = seedrandom(today);
+function generateForDate(date: string): number[] {
+  const rng = seedrandom(date);
+  const clone = [...quotes];
 
-  // Load history of last 3 days
-  const history: number[][] = JSON.parse(
-    localStorage.getItem("quote_history") || "[]"
-  );
-  const recentIds = new Set(history.flat());
-
-  // Filter out recent quotes
-  const availableQuotes = quotes.filter((q) => !recentIds.has(q.id));
-
-  // Shuffle available quotes
-  const clone = [...availableQuotes];
+  // Shuffle deterministically
   for (let i = clone.length - 1; i > 0; i--) {
     const j = Math.floor(rng() * (i + 1));
     [clone[i], clone[j]] = [clone[j], clone[i]];
   }
 
-  const ids = clone.slice(0, globals.DAILY_QUOTES).map((q) => q.id);
+  return clone.slice(0, globals.DAILY_QUOTES).map((q) => q.id);
+}
 
-  // Update history with today’s set
-  history.unshift(ids);
-  while (history.length > 3) history.pop();
-  localStorage.setItem("quote_history", JSON.stringify(history));
+export function generateSet(): number[] {
+  const today = new Date();
+  const recentIds = new Set<number>();
 
-  return ids;
+  // Get IDs from up to 3 days before today
+  for (let offset = 1; offset <= 3; offset++) {
+    const pastDate = new Date(today);
+    pastDate.setDate(today.getDate() - offset);
+    const dateStr = pastDate.toISOString().split("T")[0];
+    generateForDate(dateStr).forEach((id) => recentIds.add(id));
+  }
+
+  // Generate today’s pool and exclude recent IDs
+  const todayStr = today.toISOString().split("T")[0];
+  const rng = seedrandom(todayStr);
+  const available = quotes.filter((q) => !recentIds.has(q.id));
+
+  // Shuffle available quotes
+  for (let i = available.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [available[i], available[j]] = [available[j], available[i]];
+  }
+
+  return available.slice(0, globals.DAILY_QUOTES).map((q) => q.id);
 }
