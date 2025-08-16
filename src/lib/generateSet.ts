@@ -19,8 +19,8 @@ export function generateSet(): number[] {
   const today = new Date();
   const recentIds = new Set<number>();
 
-  // Get IDs from up to 3 days before today
-  for (let offset = 1; offset <= 3; offset++) {
+  // Get IDs from up to 7 days before today
+  for (let offset = 1; offset <= 7; offset++) {
     const pastDate = new Date(today);
     pastDate.setDate(today.getDate() - offset);
     const dateStr = pastDate.toISOString().split("T")[0];
