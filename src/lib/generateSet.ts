@@ -33,6 +33,7 @@ function generateSetForDate(targetDate: Date): number[] {
 }
 
 // Recursive function to generate set with proper exclusion logic
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function generateSetWithExclusions(
   targetDate: Date,
   excludedIds: Set<number> = new Set()
