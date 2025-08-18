@@ -79,12 +79,10 @@ function generateSetWithExclusions(
   return selectedIds;
 }
 
-function generateSet(targetDate: Date = new Date()): number[] {
+function generateSet(): number[] {
   // Use the provided date or default to current date
-  const date = new Date(targetDate);
+  const date = new Date(new Date().toISOString().split("T")[0]);
 
-  // This will cause infinite recursion, so we need a different approach
-  // Let's implement a memoized version instead
   return generateSetMemoized(date);
 }
 
