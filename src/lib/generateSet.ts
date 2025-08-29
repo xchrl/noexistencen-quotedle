@@ -108,7 +108,7 @@ function generateSetMemoized(targetDate: Date): number[] {
 
   // Get previous 7 days
   const excludedIds: Set<number> = new Set();
-  for (let i = 1; i <= 7; i++) {
+  for (let i = 1; i <= 14; i++) {
     const prevDate = new Date(targetDate);
     prevDate.setDate(targetDate.getDate() - i);
 

@@ -81,7 +81,7 @@
       "...I'm bound to be disappointed."
     ],
     "correctAnswer": 3,
-    "from": "This quote is said by the player during the ferris wheel ride in Chapter 3."
+    "from": "This quote is said by the player during the Ferris wheel ride in Chapter 3."
   },
   {
     "id": 7,
@@ -93,7 +93,7 @@
       "...I can never meet anyone's expectations."
     ],
     "correctAnswer": 3,
-    "from": "This quote is said by the player during the ferris wheel ride in Chapter 3."
+    "from": "This quote is said by the player during the Ferris wheel ride in Chapter 3."
   },
   {
     "id": 8,
@@ -105,7 +105,7 @@
       "...your heart is sincere."
     ],
     "correctAnswer": 1,
-    "from": "This quote is said by the player during the ferris wheel ride in Chapter 3."
+    "from": "This quote is said by the player during the Ferris wheel ride in Chapter 3."
   },
   {
     "id": 9,
@@ -253,7 +253,7 @@
   },
   {
     "id": 21,
-    "quote": "It's a limitation because when we say something is a certain way, ...",
+    "quote": "A definition is a limitation and a freedom. It's a limitation because when we say something is a certain way, ...",
     "answers": [
       "...it can't identify as anything else.",
       "...we are also saying it is not something else.",
@@ -405,7 +405,7 @@
       "...echoes with the silence of everything else."
     ],
     "correctAnswer": 0,
-    "from": "This quote is said when Lilith and the player reach the highest point on the ferris wheel in Chapter 3."
+    "from": "This quote is said when Lilith and the player reach the highest point on the Ferris wheel in Chapter 3."
   },
   {
     "id": 34,
@@ -771,7 +771,7 @@
     "id": 64,
     "quote": "Ah, I arrived five minutes early, but you...",
     "answers": [
-      "...managed to come right at the same time as me!",
+      "...managed to come just right after me!",
       "...were already here anyway!",
       "...got here even earlier than me!",
       "...didn't show up until 20 minutes too late..."
@@ -958,5 +958,665 @@
     ],
     "correctAnswer": 1,
     "from": "This quote is said by Lilith at the beginning of Chapter 3."
+  },
+  {
+    "id": 80,
+    "quote": "What I want is simple. I want you to - ...",
+    "answers": [
+      "...Go out of your comfort zone, and take a look at the world beyond.",
+      "...Push past your fears, and experience the outside world.",
+      "...Leave here, leave this world, and take a look beyond it.",
+      "...Gather some courage, leave here, and experience the world beyond."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by Lilith during the beginning of Chapter 3."
+  },
+  {
+    "id": 81,
+    "quote": "And look, even the furniture might need some private time for themselves. They'd likely...",
+    "answers": [
+      "...understand and accept that you need to push past your fears, and would patiently wait for you to return.",
+      "...spend some time together in silence, waiting patiently for the moment we come back.",
+      "...thank you, bid us farewell silently, and wouldn't cause much of a ruckus after we leave.",
+      "...be grateful, bidding us farewell silently, and wouldn't be so noisy after we leave."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith as she persuades the player to leave their room at the beginning of Chapter 3."
+  },
+  {
+    "id": 82,
+    "quote": "As a weird stranger suddenly talking to you, have I...",
+    "answers": [
+      "...ruined your good mood for the day?",
+      "...brightened your day by any chance?",
+      "...made you displeased or uncomfortable?",
+      "...destroyed what's little left of your trust to others?"
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is selected by the player as they talk to the Stranger in the park during Chapter 3."
+  },
+  {
+    "id": 83,
+    "quote": "Every time the weather's this nice, I think about...",
+    "answers": [
+      "...how lucky I am to live in this world.",
+      "...jumping from a tall building.",
+      "...ending my miserable life.",
+      "...how no one actually cares about me."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is selected by the player as they talk to the Stranger in the park during Chapter 3."
+  },
+  {
+    "id": 84,
+    "quote": "I love popular games because...",
+    "answers": [
+      "...the oven is actually a time machine.",
+      "...our perception of reality is different than that of a mandrake plant.",
+      "...dish soap substitutes so well for soda.",
+      "...we are condemned to be free."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is selected by the player as they talk to the Stranger in the park during Chapter 3."
+  },
+  {
+    "id": 85,
+    "quote": "\"Yes, let's go on a date! Do you have a place in mind?\" - \"I'd like to go somewhere...",
+    "answers": [
+      "...where it can be only the two of us.\"",
+      "...fun and exciting, like a theme park.\"",
+      "...where we can see the stars clearly.\"",
+      "...close to the stars.\""
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is selected by the player as Lilith asks them where they'd like to go on a date to during Chapter 3."
+  },
+  {
+    "id": 86,
+    "quote": "Next up: date time! Let's go together to...",
+    "answers": [
+      "...the theme park.",
+      "...the Ferris wheel.",
+      "...an idol concert.",
+      "...see the stars."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith just before taking the player to the theme park in Chapter 3."
+  },
+  {
+    "id": 87,
+    "quote": "You see? The Ferris wheel is still spinning. That means, if we climb over the fence now, ...",
+    "answers": [
+      "...we might still be able to ride it!",
+      "...we can still ride it.",
+      "...there's a chance we'll be able to ride it!",
+      "...it might just be working!"
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by Lilith as she notices that the Ferris wheel inside the theme park is still running during Chapter 3."
+  },
+  {
+    "id": 88,
+    "quote": "And so, you and Lilith climbed over the wall into the amusement park and...",
+    "answers": [
+      "...headed to the highest point of the Ferris wheel.",
+      "...went aboard the Ferris wheel.",
+      "...boarded the Ferris wheel.",
+      "...spend time together in the Ferris wheel."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is shown to the player right before they appear with Lilith inside the Ferris wheel in Chapter 3."
+  },
+  {
+    "id": 89,
+    "quote": "\"Fantastic, buddy! You've struck gold today.\" You've received...",
+    "answers": [
+      "...an autographed photo of the whole Huis-clos band!",
+      "...a photo of the Huis-clos band with Lilith's, Sartre's and Fouco's autographs!",
+      "...special VIP tickets to the next Huis-clos concert!",
+      "...an autographed photo of Lilith, lead singer of Huis-clos!"
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is shown right before the Huis-clos performance in Chapter 3."
+  },
+  {
+    "id": 90,
+    "quote": "Next up, it's time for the idol handshake event! Feel free to...",
+    "answers": [
+      "...choose the order in which you meet your idols~",
+      "...come up to any of us and ask for a handshake~",
+      "...also ask for an autograph~",
+      "...choose any one of your idols~"
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith right after the Huis-clos performance in Chapter 3."
+  },
+  {
+    "id": 91,
+    "quote": "But... even though I put in so much effort, there are still some conflicts within the band. That's why I need to become even better and...",
+    "answers": [
+      "...work extra hard to make sure Huis-close shines bright!",
+      "...lead Huis-clos to a brighter tomorrow with everyone!",
+      "...make sure no more conflicts appear!",
+      "...lead our band to a brighter future!"
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by Lilith when the player comes up to her after the Huis-clos performance in Chapter 3."
+  },
+  {
+    "id": 92,
+    "quote": "As the great leader of this band, I'm determined to guide everyone well! - At least, ...",
+    "answers": [
+      "...I hope I've made a noticeable impact.",
+      "...that was what I believed, until recently.",
+      "...that's what I used to think.",
+      "...until recently, when my beliefs were shaken deeply."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by Sartre when the player comes up to her after the Huis-clos performance in Chapter 3."
+  },
+  {
+    "id": 93,
+    "quote": "Alright, that wraps up this idol handshake event. But remember, ...",
+    "answers": [
+      "...more opportunities will be available in the future!",
+      "...you're just as important to all three of us!",
+      "...if you want an autograph, stay for a while longer!",
+      "...you're also an idol to all three of us!"
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith after the player speaks with her, Sartre and Fouco after the Huis-clos performance in Chapter 3."
+  },
+  {
+    "id": 94,
+    "quote": "Sure, we three seem to get along well, but in reality, ...",
+    "answers": [
+      "...each of us has things we need to hide from the others, as well as things we want to fight for.",
+      "...we all have truths we wish to hide from one another, as well as ideals we want to strive for.",
+      "...this band is riddled with issues that go way deeper than our distrust to each other.",
+      "...all of us harbor a feeling of distrust in regards to one another."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith after the player speaks with her, Sartre and Fouco after the Huis-clos performance in Chapter 3."
+  },
+  {
+    "id": 95,
+    "quote": "To achieve this, we all need to hide various truths from one another. For instance, Sartre quoting philosophers to seem superior, Foucault's fabricated maturity and coolness, and me...",
+    "answers": [
+      "..., acting like I don't notice the issue, even though it hurts to see.",
+      "...making separate pacts with both of them to stay in the band forever.",
+      "...acting like the lead singer that unites everyone in the band.",
+      "...forcing them to get along with each other under the guise of friendship."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by Lilith after the player speaks with her, Sartre and Fouco after the Huis-clos performance in Chapter 3."
+  },
+  {
+    "id": 96,
+    "quote": "Three individuals, each burdened with secrets, navigating tension and pain as they face one another, dreading...",
+    "answers": [
+      "...the moment they lose their masks and show their true selves.",
+      "...that their lies may one day be exposed.",
+      "...the day their guilty secrets are exposed.",
+      "...the day they lose respect in the eyes of others."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by Lilith after the player speaks with her, Sartre and Fouco after the Huis-clos performance in Chapter 3."
+  },
+  {
+    "id": 97,
+    "quote": "From this, we draw a conclusion - Ah, why write grotesque plots? ...",
+    "answers": [
+      "...The stage is simply the others!",
+      "...The others are what makes the play!",
+      "...The plot is the others!",
+      "...Others are the stage!"
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith after the player speaks with her, Sartre and Fouco after the Huis-clos performance in Chapter 3."
+  },
+  {
+    "id": 98,
+    "quote": "The desire to gain acknowledgement from others, the longing to prove one's correctness, and the need for the reassuring sense of control... Yes, everyone...",
+    "answers": [
+      "...has their own \"subjectivity\".",
+      "...relies on others to boost their self-esteem.",
+      "...makes decisions based on their \"subjectivity\".",
+      "...has their experiences explained by \"subjectivity\"."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith after the player speaks with her, Sartre and Fouco after the Huis-clos performance in Chapter 3."
+  },
+  {
+    "id": 99,
+    "quote": "There's no need to rush an answer, because you (we) still have another choice. And that is, ...",
+    "answers": [
+      "...the Wonderland.",
+      "...me (Lilith).",
+      "...our life together.",
+      "...our shared room."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by Lilith after the player speaks with her, Sartre and Fouco after the Huis-clos performance in Chapter 3."
+  },
+  {
+    "id": 100,
+    "quote": "I do not have a \"subjectivity\". Or rather, my \"subjectivity\" is willing to...",
+    "answers": [
+      "...be replaced by yours.",
+      "...be erased from existence for you.",
+      "...dissipate for your sake.",
+      "...stop existing, in favor of yours."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by Lilith after the player speaks with her, Sartre and Fouco after the Huis-clos performance in Chapter 3."
+  },
+  {
+    "id": 101,
+    "quote": "Did I understand Lilith's words? Did I agree with Lilith's words? Did I doubt Lilith's words? But perhaps, at this moment, words no longer matter. At the highest point in the sky, we...",
+    "answers": [
+      "...nestled closely to each other, looking into the starry night.",
+      "...felt a comfortable peace wash over us.",
+      "...promised each other never to abandon the other.",
+      "...embraced each other, as if the two of us had become one."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith after the player speaks with her, Sartre and Fouco after the Huis-clos performance in Chapter 3."
+  },
+  {
+    "id": 102,
+    "quote": "\"Yes, Your Majesty, it's me.\" \"Weren't you looking for the truth of the...",
+    "answers": [
+      "...'girl beyond the world'?\"",
+      "...world you find yourself in?\"",
+      "...'girl inside this world'?\"",
+      "...girl that's currently beside you?"
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by the Black Notebook after the player speaks with Lilith after the Huis-clos performance in Chapter 3."
+  },
+  {
+    "id": 103,
+    "quote": "Yes, the Ferris wheel has indeed stopped. But fortunately, ...",
+    "answers": [
+      "...it seems like some people are already working on a fix.",
+      "...we're very close to the ground, so we can open the door and jump out.",
+      "...I can already see people heading to rescue us.",
+      "...the ground is not that far, so we could just jump out."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by Lilith after the Ferris wheel stops working in Chapter 3."
+  },
+  {
+    "id": 104,
+    "quote": "You jump first, and I'll follow. Trust me, it'll be fine. \"From here? ...",
+    "answers": [
+      "...But it's so high up!\"",
+      "...I won't do it, I'm too scared...\"",
+      "...Ten thousand meters in the air!?\"",
+      "...Ten kilometers in the air!?"
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by the player after the Ferris wheel stops working in Chapter 3."
+  },
+  {
+    "id": 105,
+    "quote": "Hehe, it's not that exaggerated. This sounds like a joke, and jumping out does indeed seem terrifying. But trust me, ...",
+    "answers": [
+      "...I'll be with you, okay?",
+      "...we'll make it out safely, okay?",
+      "...it's safe to jump, okay?",
+      "...we'll be fine, okay?"
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith after she suggests to jump down from the Ferris wheel in Chapter 3."
+  },
+  {
+    "id": 106,
+    "quote": "No, you won't die, I won't let you die. From here, from this little Ferris wheel cabin, let's...",
+    "answers": [
+      "...take the first step toward the world beyond.",
+      "...overcome our fears and take the first step, together.",
+      "...make sure no bad thoughts cloud our mind.",
+      "...push through the negative feelings."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith after she suggests to jump down from the Ferris wheel in Chapter 3."
+  },
+  {
+    "id": 107,
+    "quote": "I take a deep breath and leap toward the ground. A brief moment of weightlessness, and I...",
+    "answers": [
+      "...find myself on the ground, my fall cushioned by a large, soft mattress.",
+      "...land back on the ground. The ground was closer than I expected.",
+      "...land on the ground, with Lilith landing right next to me.",
+      "...fall onto the ground with a soft thump. It seems like the ground was closer than what I thought before."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is shown after the player jumps down from the Ferris wheel in Chapter 3."
+  },
+  {
+    "id": 108,
+    "quote": "Lilith left the dark amusement park, walking...",
+    "answers": [
+      "...hand in hand with you back home.",
+      "...with a quick step back home.",
+      "...alone on the road home.",
+      "...by herself on the dark, eerie road home."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is shown at the end of Chapter 3."
+  },
+  {
+    "id": 109,
+    "quote": "Before becoming a form of medicine, the candy jar was a universal relationship between humanity and itself: it symbolized the...",
+    "answers": [
+      "...gleeful childhood life.",
+      "...sweetness of a life without responsibilities.",
+      "...cheerful teenagehood.",
+      "...blissful era of school life."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is shown at the beginning of Chapter 4."
+  },
+  {
+    "id": 110,
+    "quote": "Once the secret of magical girls was understood, decay began - when such knowledge was divided among a specific group, ...",
+    "answers": [
+      "...the direct relationship between seeing and speaking also disintegrated.",
+      "...those who possessed the forbidden knowledge had to act as if they didn't know a thing.",
+      "...the sharp border between the gleeful, unknowing life and the cruel, real one grew ever larger.",
+      "...those blessed with the esoteric knowledge were swiftly eliminated from everyday life."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is shown at the beginning of Chapter 4."
+  },
+  {
+    "id": 111,
+    "quote": "No, I'm not Lilith. If you're wondering why, it's because...",
+    "answers": [
+      "...Lilith is long gone from this world.",
+      "...the girl named Lilith is right in front of me.",
+      "...the girl called Lilith is far away from here.",
+      "...the girl named Lilith is right behind me."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said at the beginning of Chapter 4."
+  },
+  {
+    "id": 112,
+    "quote": "You're finally awake. Is your head still hurting? But don't worry, with these pills, ...",
+    "answers": [
+      "...all your pain will go away in an instant!",
+      "...you'll be feeling okay instantly!",
+      "...you'll be cured in no time!",
+      "...and my support, you'll be better than ever!"
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by Lilith at the beginning of Chapter 4."
+  },
+  {
+    "id": 113,
+    "quote": "Tada! Welcome to the...",
+    "answers": [
+      "...\"Lilith's Sweet Candy Therapy\" session!",
+      "...\"Sweet Nurse: Lilith\" treatment session!",
+      "...\"Lilith's Special, 100% Safe Candy Treatment\" session!",
+      "...\"Lilith's Special Sweet Nurse Treatment\" session!"
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith at the beginning of Chapter 4."
+  },
+  {
+    "id": 114,
+    "quote": "Candy? That's ridiculous! Lilith Nurse is a professional, so these are real medicine pills. Don't worry, ...",
+    "answers": [
+      "...they'll fix you right up!",
+      "...they have absolutely no side effects!",
+      "...they may look like candy, but they're the real deal!",
+      "...even though they're real pills, they do taste like candy!"
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith at the beginning of Chapter 4."
+  },
+  {
+    "id": 115,
+    "quote": "\"You're seriously unwell! Every time you see Lilith, you never...",
+    "answers": [
+      "...take your time to pay proper respect to me, the great Lord Hair Ribbon.\"",
+      "...show proper respect to the great Lord Hair Ribbon atop her head.\"",
+      "...notice just how great I, the great Lord Hair Ribbon, look atop her head.\"",
+      "...acknowledge that I, the great Lord Hair Ribbon, am constantly talking to you!\""
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by the hair ribbon on top of Lilith's head as it speaks to the player in Chapter 4."
+  },
+  {
+    "id": 116,
+    "quote": "Even though Lilith holds in her hand these pills of supreme healing power, which bring joy and happiness...",
+    "answers": [
+      "...You can't take too many or you'll overdose!",
+      "...Too much happiness is still bad for you!",
+      "...They're still medicine! So taking too many is bad for you!",
+      "...You can only take at most three a day, and I've already given you that much!"
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by Lilith after giving the player three candy-pills during Chapter 4."
+  },
+  {
+    "id": 117,
+    "quote": "According to the rules, a person can only have three candies a day. Otherwise, ...",
+    "answers": [
+      "...you will experience a severe headache.",
+      "...you'll find out a truth too harsh to accept.",
+      "...I can't guarantee you'll be fine.",
+      "...something terrifying will happen."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith after the player asks for a fourth pill during Chapter 4."
+  },
+  {
+    "id": 118,
+    "quote": "But some students, like you, didn't believe in this \"rule\", so they secretly took a fourth \"pill\". And then... ...... And then, they...",
+    "answers": [
+      "...all died.",
+      "...went missing.",
+      "...lost all respect.",
+      "...were never heard from again."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith after the player asks for a fourth pill during Chapter 4."
+  },
+  {
+    "id": 119,
+    "quote": "It's like living in a beautiful glass jar, only to find...",
+    "answers": [
+      "...that you can't settle for anything worse.",
+      "...cheap plastic bottles unbearable afteward.",
+      "...out you've had it easy all your life.",
+      "...dirty, cheap glass bottles now disgusting."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by the Green Pill after it explains the backstory behind the fourth pill during Chapter 4."
+  },
+  {
+    "id": 120,
+    "quote": "So, every student who ate the 'fourth candy'...",
+    "answers": [
+      "...was never heard from again.",
+      "...killed themselves.",
+      "...committed suicide.",
+      "...went missing shortly after."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by the Green Pill after it explains the backstory behind the fourth pill during Chapter 4."
+  },
+  {
+    "id": 121,
+    "quote": "From this, we know that taking only three pills a day, ...",
+    "answers": [
+      "...and not any more, is supposed to benefit your mental health.",
+      "...is something that everyone must abide by and not break no matter what.",
+      "...and the rule to not take any more was put in place to protect all of us.",
+      "...is an unshakable standard, established for everyone's well-being."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith after the Green Pill explains the backstory behind the fourth pill during Chapter 4."
+  },
+  {
+    "id": 122,
+    "quote": "Let's stop here. This ability to \"follow rules\" is...",
+    "answers": [
+      "...a crucial skill for living in the world beyond.",
+      "...necessary for humanity to thrive.",
+      "...an important skill if you want to adapt to the world outside.",
+      "...a skill that you cannot neglect."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith after the Green Pill explains the backstory behind the fourth pill during Chapter 4."
+  },
+  {
+    "id": 123,
+    "quote": "\"She lightly touched your forehead with her fingertips and murmured a spell.\" ...",
+    "answers": [
+      "...Rid yourself of all negative thoughts; fly high and let your mind run free☆!",
+      "...Become the happiest person in the world; let all misfortunes and pain fly away☆!",
+      "...Improve your mood and feel happy; may your dreams be sweet and peaceful☆!",
+      "...Lose yourself in the feeling of pleasure; become the happiest person in the world☆!"
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by Lilith near the end of Chapter 4."
+  },
+  {
+    "id": 124,
+    "quote": "Since that's the case, let's have a real chat... Just you, and me. Oh, no, I'm not talking about the game's protagonist - their story has taken a temporary pause. I'm talking about - ...",
+    "answers": [
+      "...the person behind this computer.",
+      "...the one that's steering the protagonist.",
+      "...you, in front of the screen.",
+      "...the protagonist's controller."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by Lilith at the end of Chapter 4."
+  },
+  {
+    "id": 125,
+    "quote": "As you can see, this is a game. I don't even need to remind you of this, since...",
+    "answers": [
+      "...you made the conscious effort to play it.",
+      "...that much should be obvious.",
+      "...how could it be anything but a game?",
+      "...you've willingly stepped into this world."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith at the beginning of Chapter 5."
+  },
+  {
+    "id": 126,
+    "quote": "Suppose three kilometers from your home, there's a man named Mr. John. But you've never met him before, and for the rest of your life, you never will. Now, tell me - ...",
+    "answers": [
+      "...who is more real to you? Me, who has spent time with you? Or that man, who exists but will never intersect with your life?",
+      "...which person truly exists? Me, who you know pretty well now? Or Mr. John, that might as well not exist for you?",
+      "...in your mind, am I more real to you, or is he?",
+      "...what is the probability of you meeting him during your lifetime?"
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith at the beginning of Chapter 5."
+  },
+  {
+    "id": 127,
+    "quote": "Reality and the virtual world cannot fully serve as markers of existence, especially...",
+    "answers": [
+      "...in a world dominated by artificial intelligence.",
+      "...in an age filled with simulations and replicas.",
+      "...when we sometimes can't distinguish one from the other.",
+      "...if one becomes more important than the other."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by Lilith at the beginning of Chapter 5."
+  },
+  {
+    "id": 128,
+    "quote": "The first theme revealed the \"self\". This means \"the world exists within me\", and we can...",
+    "answers": [
+      "...better understand the world through our experiences.",
+      "...explain said world thanks to our memories.",
+      "...perceive and define this world through our own will.",
+      "..., through that \"self\", perceive and define this world."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by Lilith during Chapter 5, as she recalls the philosophy behind Chapter 1."
+  },
+  {
+    "id": 129,
+    "quote": "\"Common sense\" does not have absolute validity. When unnecessary, we can...",
+    "answers": [
+      "...forget it exists, thus explaining the world using the \"self\".",
+      "...turn it off - like a lightbulb being controlled like a light switch.",
+      "...put it on hold - leave it like we leave things on our to-do list for later.",
+      "...suspend it - shake it off like droplets of rain on our coat."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith during Chapter 5, as she recalls the philosophy behind Chapter 1."
+  },
+  {
+    "id": 130,
+    "quote": "Individuals can be a robed scholar, a cold-faced Demon King, or a talkative notebook... In short, ...",
+    "answers": [
+      "...anything apart from yourself that possesses subjectivity.",
+      "...any object that exists can become an individual.",
+      "...if an object possesses subjectivity, then it is an individual.",
+      "...anything the self as a perspective meets in the world."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith during Chapter 5, as she recalls the philosophy behind Chapter 2."
+  },
+  {
+    "id": 131,
+    "quote": "When the self as a perspective meets the individuals in the world, it defines them. It is through \"definition\" that...",
+    "answers": [
+      "...we can differentiate one individual from another.",
+      "...individuals are separated from the unified whole of the world.",
+      "...the self learns to recognize certain individuals.",
+      "...said individuals are able to possess unique traits."
+    ],
+    "correctAnswer": 1,
+    "from": "This quote is said by Lilith during Chapter 5, as she recalls the philosophy behind Chapter 2."
+  },
+  {
+    "id": 132,
+    "quote": "A definition is a limitation and a freedom. (...) It's a freedom because, through \"definition\", the individual can...",
+    "answers": [
+      "...gain subjectivity and exist.",
+      "...be separated from the unified whole of the world.",
+      "...continuously transcend and move toward existence.",
+      "...gain traits that separate it from other individuals."
+    ],
+    "correctAnswer": 2,
+    "from": "This quote is said by Lilith during Chapter 5, as she recalls the philosophy behind Chapter 2."
+  },
+  {
+    "id": 133,
+    "quote": "Within the individuals you define, there also resides subjectivity. When subjectivity meets subjectivity, we must...",
+    "answers": [
+      "...consider how those individuals relate to each other.",
+      "...come to terms with relationships appearing without our input.",
+      "...challenge the idea of individuals forming relationships with other individuals.",
+      "...confront the topic of \"relationships with others\"."
+    ],
+    "correctAnswer": 3,
+    "from": "This quote is said by Lilith during Chapter 5, as she recalls the philosophy behind Chapter 3."
+  },
+  {
+    "id": 134,
+    "quote": "The concrete \"other\" disappears. Even when seeking to rebel, one doesn't know where to start. So even after discovering the truth through the \"fourth candy\", one must...",
+    "answers": [
+      "...return to the everyday order as if they were unaware.",
+      "...act as if they didn't uncover any secret.",
+      "...live out their ordinary live as ever.",
+      "...pretend nothing ever happened."
+    ],
+    "correctAnswer": 0,
+    "from": "This quote is said by Lilith during Chapter 5, as she recalls the philosophy behind Chapter 4."
   }
 ]
