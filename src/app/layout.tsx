@@ -6,6 +6,7 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import { cookies } from "next/headers";
 import { Toaster } from "sonner";
+import { getBackgroundByKey } from "@/lib/getBackgroundByKey";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,8 +38,10 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const cookieStore = await cookies();
-  const background = cookieStore.get("background");
-  const src = background ? decodeURIComponent(background.value) : null;
+  const cookie = cookieStore.get("background");
+  const key = cookie?.value ?? "wonderland:0";
+
+  const src = getBackgroundByKey(key);
 
   return (
     <html lang="pl">
