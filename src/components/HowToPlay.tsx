@@ -94,7 +94,7 @@ export default function HowToPlay({ mode }: { mode: "daily" | "endless" }) {
                 </ul>
               </div>
               <p className="text-muted-foreground text-end">
-                &copy; 2025{" "}
+                &copy; {new Date().getFullYear()}{" "}
                 <a
                   href="https://xchrl.xyz/"
                   target="_blank"
